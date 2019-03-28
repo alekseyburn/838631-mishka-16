@@ -1,7 +1,7 @@
 # Личный проект «Мишка» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Алексей Коршаков](https://up.htmlacademy.ru/adaptive/16/user/838631).
-* Наставник: `Неизвестно`.
+* Наставник: [Валерий Мельников](https://up.htmlacademy.ru/adaptive/16/user/1043615).
 
 ---
 
