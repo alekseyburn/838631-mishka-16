@@ -2,13 +2,13 @@
 <html lang="ru">
 <head>
   <meta charset="utf-8">
-  <title>HTML Academy: Мишка</title>
+  <title>Магазин «Мишка»</title>
 </head>
 <body>
 
   <header class="page-header">
-    <a class="page-header__logo">
-      <img class="page-header__logo-image" src="#" alt="логотип магазина «Мишка»">
+    <a class="page-header__logo" href="/">
+      <img class="page-header__logo-image" src="#" width="86" height="35" alt="магазин «Мишка»">
     </a>
     <nav class="main-nav">
       <button class="main-nav__toggle" type="button">Открыть меню</button>
@@ -30,7 +30,6 @@
       </div>
     </nav>
   </header>
-  <!-- сделал модификаторы search и cart для добавления иконок -->
 
   <main class="page-main">
 
@@ -47,54 +46,53 @@
         </li>
       </ul>
     </section>
-    <!-- сделал модификаторы interior и toys для добавления иконок -->
 
-    <section class="featured">
-      <div class="featured__wrapper">
-        <h2 class="featured__title">Вязаные корзинки</h2>
-        <b class="featured__subtitle">Товар недели</b>
-        <p class="featured__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
-        <table class="featured__list">
-          <tr>
-            <td class="featured__caption">Цвет:</td>
-            <td class="featured__value">«Тиффани»/серый</td>
+    <section class="weekly-good">
+      <div class="weekly-good__wrapper">
+        <h2 class="weekly-good__title">Вязаные корзинки</h2>
+        <b class="weekly-good__subtitle">Товар недели</b>
+        <p class="weekly-good__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
+        <table class="weekly-good__list">
+          <tr class="weekly-good__row">
+            <td class="weekly-good__caption">Цвет:</td>
+            <td class="weekly-good__value">«Тиффани»/серый</td>
           </tr>
-          <tr>
-            <td class="featured__caption">Диаметр:</td>
-            <td class="featured__value">25 см</td>
+          <tr class="weekly-good__row">
+            <td class="weekly-good__caption">Диаметр:</td>
+            <td class="weekly-good__value">25 см</td>
           </tr>
-          <tr>
-            <td class="featured__caption">Высота:</td>
-            <td class="featured__value">15 см</td>
+          <tr class="weekly-good__row">
+            <td class="weekly-good__caption">Высота:</td>
+            <td class="weekly-good__value">15 см</td>
           </tr>
         </table>
-        <p class="featured__picture">
-          <img class="featured__img" src="#" alt="Изображение вязанных корзинок">
+        <p class="weekly-good__picture">
+          <img class="weekly-good__img" src="#" width="260" height="315" alt="Вязаные корзинки">
         </p>
-        <p class="featured__price">Цена: 990 руб.</p>
-        <a class="featured__order button" href="order.html">Заказать</a>
+        <p class="weekly-good__price">Цена: 990 руб.</p>
+        <a class="weekly-good__order button" href="order.html">Заказать</a>
       </div>
     </section>
 
     <section class="about">
       <h2 class="about__title">Коротко о нас:</h2>
       <ul class="about__list">
-        <li class="about__item">
+        <li class="about__item about__item--ecology">
           <p class="about__text">Экологически чистые материалы</p>
         </li>
-        <li class="about__item">
+        <li class="about__item about__item--price">
           <p class="about__text">Скандинавский стиль по российской цене</p>
         </li>
-        <li class="about__item">
+        <li class="about__item about__item--likes">
           <p class="about__text">Увеличивает лайки на фотографиях</p>
         </li>
-        <li class="about__item">
+        <li class="about__item about__item--knitting">
           <p class="about__text">Связано вручную с любовью и умилением</p>
         </li>
-        <li class="about__item">
+        <li class="about__item about__item--support">
           <p class="about__text">Поддержка отечественного производителя</p>
         </li>
-        <li class="about__item">
+        <li class="about__item about__item--gift">
           <p class="about__text">Поставляется в подарочной упаковке</p>
         </li>
       </ul>
