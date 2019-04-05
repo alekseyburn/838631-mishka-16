@@ -1,0 +1,18 @@
+.site-list {
+  background-color: $white;
+
+  @include reset-list;
+}
+
+.site-list__link {
+  display: block;
+  padding: 26px 30px 28px 75px;
+
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 24px;
+  color: $black;
+
+  background-color: $white;
+  border-top: 1px solid $gray;
+}

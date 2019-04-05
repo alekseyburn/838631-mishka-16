@@ -1,0 +1,7 @@
+.social {
+  background-color: $light-gray;
+}
+
+.social__list {
+  @include reset-list;
+}

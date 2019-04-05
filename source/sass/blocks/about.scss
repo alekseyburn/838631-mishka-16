@@ -1,0 +1,62 @@
+.about {
+  padding: 27px 30px;
+
+  background-color: $white;
+}
+
+.about__title {
+  margin: 0;
+  margin-bottom: 32px;
+
+  font-size: 25px;
+  color: $black;
+}
+
+.about__list {
+  @include reset-list;
+}
+
+.about__item {
+  margin-bottom: 29px;
+  padding-top: 54px;
+
+  background-repeat: no-repeat;
+
+  &--ecology {
+    background-image: url("../../img/icon-feature-flower.svg");
+    background-position: 8px top;
+  }
+
+  &--price {
+    background-image: url("../../img/icon-feature-money.svg");
+  }
+
+  &--likes {
+    background-image: url("../../img/icon-feature-heart.svg");
+    background-position: 8px 6px;
+  }
+
+  &--knitting {
+    background-image: url("../../img/icon-feature-ball.svg");
+    background-position: 3px 3px;
+  }
+
+  &--support {
+    background-image: url("../../img/icon-feature-rocket.svg");
+    background-position: 0 3px;
+  }
+
+  &--gift {
+    background-image: url("../../img/icon-feature-gift.svg");
+    background-position: 3px 2px;
+  }
+}
+
+.about__text {
+  margin: 0;
+
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 20px;
+  color: $black;
+}
