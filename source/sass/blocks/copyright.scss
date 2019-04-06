@@ -2,8 +2,24 @@
   background-color: $light-gray;
 }
 
-.copyright__text {
+.copyright__link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  font-weight: bold;
   font-size: 19px;
-  color: $black;
   line-height: 19px;
+  color: $black;
+
+  &:hover,
+  &:focus {
+    path {
+      fill: $medium-green-hover;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }

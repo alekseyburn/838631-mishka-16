@@ -12,10 +12,15 @@ a {
   text-decoration: none;
 }
 
+img {
+  width: 100%;
+  height: auto;
+}
+
 body {
   margin: 0;
 
-  font-weight: regular;
+  font-weight: normal;
   font-size: 15px;
   line-height: 30px;
   font-family: $font;

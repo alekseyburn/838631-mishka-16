@@ -4,4 +4,23 @@
 
 .social__list {
   @include reset-list;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 141px;
+  margin: 0 auto;
+}
+
+.social__icon {
+  &:hover,
+  &:focus {
+    path {
+      fill: $medium-green-hover;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
