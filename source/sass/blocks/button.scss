@@ -1,20 +1,22 @@
 .button {
   display: block;
-  text-align: center;
-  padding: 15px 0 13px;
+  padding: 14px 0;
+
   font-weight: bold;
   font-size: 17px;
   line-height: 20px;
+  text-align: center;
   color: $main-text;
   text-transform: uppercase;
-  background-color: transparent;
 
+  background-color: transparent;
   border: 2px solid $main-text;
 
   &:hover,
   &:focus {
-    background-color: $main-text;
     color: $white;
+
+    background-color: $main-text;
   }
 
   &:active {

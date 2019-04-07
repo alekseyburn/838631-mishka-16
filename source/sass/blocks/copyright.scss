@@ -12,11 +12,11 @@
   line-height: 19px;
   color: $black;
 
+  fill: $light-green;
+
   &:hover,
   &:focus {
-    path {
-      fill: $medium-green-hover;
-    }
+    fill: $medium-green-hover;
   }
 
   &:active {

@@ -21,10 +21,7 @@
 
 .weekly-good__title {
   margin: 0;
-  margin-bottom: 6px;
-
-  font-size: 25px;
-  color: $black;
+  margin-bottom: 5px;
 }
 
 .weekly-good__subtitle {
@@ -58,9 +55,10 @@
 }
 
 .weekly-good__caption {
-  padding-top: 9px;
+  display: flex;
+  align-items: center;
+  min-height: 39px;
   padding-right: 12px;
-  padding-bottom: 10px;
 }
 
 .weekly-good__img {
@@ -69,7 +67,7 @@
 
 .weekly-good__price {
   margin: 0;
-  margin-bottom: $indent;
+  margin-bottom: 24px;
 
   font-weight: bold;
   font-size: 17px;

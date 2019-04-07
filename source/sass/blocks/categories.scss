@@ -1,9 +1,5 @@
-.categories {
-  border-top: 1px solid $gray;
-}
-
 .categories__wrapper {
-  min-height: 281px;
+  min-height: 282px;
 
   background-color: $gray;
   background-image: url("../../img/hero-mobile@1x.jpg");
@@ -29,7 +25,6 @@
   position: relative;
 
   display: block;
-  // padding: 26px 30px 29px;
   padding: 27px;
 
   font-weight: bold;
@@ -41,7 +36,6 @@
     content: "";
     position: absolute;
 
-    background-repeat: no-repeat;
     opacity: 0.5;
   }
 
@@ -49,11 +43,12 @@
     background-color: $light-green;
 
     &::after {
-      top: 23px;
+      top: 50%;
       right: 37px;
 
       width: 40px;
       height: 62px;
+      margin-top: -30px;
 
       background-image: url("../../img/icon-interior.svg");
     }
@@ -68,11 +63,12 @@
     background-color: $medium-green;
 
     &::after {
-      top: 23px;
+      top: 50%;
       right: 27px;
 
       width: 60px;
       height: 60px;
+      margin-top: -30px;
 
       background-image: url("../../img/icon-toy.svg");
     }
