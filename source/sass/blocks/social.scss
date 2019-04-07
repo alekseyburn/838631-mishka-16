@@ -15,9 +15,7 @@
 .social__icon {
   &:hover,
   &:focus {
-    path {
-      fill: $medium-green-hover;
-    }
+    fill: $medium-green-hover;
   }
 
   &:active {

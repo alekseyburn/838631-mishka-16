@@ -1,9 +1,11 @@
 .site-list {
-  display: none; //скрыл меню
-
-  background-color: $white;
-
   @include reset-list;
+
+  // display: none;
+}
+
+.site-list__item {
+  display: flex; //fix вертикального выравнивания в ie11
 }
 
 .site-list__link {
@@ -11,10 +13,10 @@
 
   display: flex;
   align-items: center;
-  width: 100%;
+  width: 100%; //fix вертикального выравнивания в ie11
   min-height: 79px;
-  padding-right: 30px;
-  padding-left: 76px;
+  padding-right: $indent;
+  padding-left: $indent + 46px;
 
   font-weight: bold;
   font-size: 17px;
@@ -26,7 +28,7 @@
 
   &:hover,
   &:focus {
-    color: rgba($black, 0.6); //функция opacify почему-то не работает, а transparentize обратная функция
+    color: rgba($black, 0.6);
 
     .site-list__svg {
       opacity: 1;
@@ -46,10 +48,7 @@
 
 .site-list__svg {
   position: absolute;
-  top: 50%;
   left: 30px;
-
-  margin-top: -9px;
 
   opacity: 0.2;
 }

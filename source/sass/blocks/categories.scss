@@ -10,7 +10,7 @@
 
 .categories__lead {
   margin: 0;
-  padding: 70px 30px;
+  padding: 70px $indent 0;
 
   font-size: 27px;
   text-align: center;
@@ -21,11 +21,18 @@
   @include reset-list;
 }
 
-.categories__link {
+.categories__item {
   position: relative;
 
-  display: block;
-  padding: 27px;
+  min-height: 103px;
+}
+
+.categories__link {
+  position: absolute;
+  bottom: 0;
+
+  width: 100%;
+  padding: 28px $indent;
 
   font-weight: bold;
   font-size: 19px;
@@ -81,7 +88,7 @@
 
   &:hover,
   &:focus {
-    padding-bottom: 32px;
+    padding-bottom: 34px;
 
     &::after {
       opacity: 0.7;
