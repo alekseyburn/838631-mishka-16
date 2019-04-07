@@ -3,8 +3,9 @@
 }
 
 .catalog__item {
-  padding: $indent;
-  padding-bottom: 0;
+  // padding: $indent;
+  // padding-bottom: 0;
+  margin-bottom: $indent;
 
   &:hover .catalog__wrapper {
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
@@ -12,13 +13,13 @@
 
   &:active .catalog__wrapper {
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
-  } // здесь не совсем понял по стайлгайду про поведение. Надо обсудить.
+  }
 }
 
 .catalog__img-link {
   display: block;
   width: 260px;
-  height: 195px; //сделал размеры ссылке потому что заметил, что у ссылки размер по высоте немного больше, чем размер у ее дочернего элемента. Не знаю как с этим бороться, кроме как таким способом.
+  height: 195px;
 }
 
 .catalog__wrapper {
