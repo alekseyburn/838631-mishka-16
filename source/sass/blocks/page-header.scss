@@ -1,0 +1,47 @@
+.page-header {
+  display: flex;
+  flex-direction: column;
+
+  background-color: $white;
+}
+
+.page-header__wrapper {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80px;
+
+  border-bottom: 1px solid $gray;
+}
+
+.page-header__logo {
+  width: 86px;
+  height: 35px;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.page-header__toggle {
+  position: absolute;
+  top: 50%;
+  right: 30px;
+
+  width: 20px;
+  height: 14px;
+
+  background-color: transparent;
+  background-image: url("../../img/icon-menu-open.svg");
+  background-repeat: no-repeat;
+  border: none;
+  transform: translateY(-50%);
+  cursor: pointer;
+}

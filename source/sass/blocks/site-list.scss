@@ -1,0 +1,54 @@
+.site-list {
+  @include reset-list;
+
+  // display: none;
+}
+
+.site-list__item {
+  display: flex; //fix вертикального выравнивания в ie11
+}
+
+.site-list__link {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  width: 100%; //fix вертикального выравнивания в ie11
+  min-height: 79px;
+  padding-right: $indent;
+  padding-left: $indent + 46px;
+
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 24px;
+  color: $black;
+
+  background-color: $white;
+  border-bottom: 1px solid $gray;
+
+  &:hover,
+  &:focus {
+    color: rgba($black, 0.6);
+
+    .site-list__svg {
+      opacity: 1;
+
+      fill: $light-green;
+    }
+  }
+
+  &:active {
+    color: rgba($black, 0.3);
+
+    .site-list__svg {
+      opacity: 0.3;
+    }
+  }
+}
+
+.site-list__svg {
+  position: absolute;
+  left: 30px;
+
+  opacity: 0.2;
+}

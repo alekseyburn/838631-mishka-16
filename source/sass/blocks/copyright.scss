@@ -1,0 +1,25 @@
+.copyright {
+  background-color: $light-gray;
+}
+
+.copyright__link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  font-weight: bold;
+  font-size: 19px;
+  line-height: 19px;
+  color: $black;
+
+  fill: $light-green;
+
+  &:hover,
+  &:focus {
+    fill: $medium-green-hover;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
