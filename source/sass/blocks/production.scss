@@ -42,7 +42,7 @@
     background-position: center center;
   }
 
-    &::after {
+  &::after {
     content: "";
 
     min-height: inherit;
@@ -119,6 +119,6 @@
 }
 
 .production__order {
-  margin: 0 $indent;
   width: auto;
+  margin: 0 $indent;
 }
