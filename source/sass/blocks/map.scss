@@ -1,7 +1,7 @@
 .map {
   position: relative;
 
-  width: 100%;
+  overflow: hidden;
   height: 457px;
 }
 
@@ -17,5 +17,4 @@
   z-index: 1;
 
   display: block;
-  width: 320px;
 }

@@ -8,7 +8,7 @@
 .input-data__field {
   width: 100%;
   margin-top: 20px;
-  padding-bottom: 14px;
+  padding-bottom: 12px;
 
   font-size: 17px;
   line-height: 18px;
@@ -19,8 +19,6 @@
   border-bottom: 2px solid $black;
 
   &--phone {
-    margin-top: 16px;
-    margin-bottom: 31px;
     padding-right: 40px;
     padding-bottom: 12px;
 
@@ -29,7 +27,6 @@
   }
 
   &--email {
-    margin-bottom: $indent;
     padding-right: 40px;
     padding-bottom: 18px;
   }
@@ -51,7 +48,7 @@
 
 .input-data__icon {
   position: absolute;
-  top: 15px;
+  top: 19px;
   right: 5px;
   z-index: -1;
 

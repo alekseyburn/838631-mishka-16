@@ -1,16 +1,29 @@
 .textarea {
   margin-top: 26px;
-  margin-bottom: 12px;
+  margin-bottom: -18px;
 }
 
 .textarea__field {
   width: 100%;
   min-height: 145px;
-  border: 2px solid  $black;
+  padding: 15px;
+  padding-bottom: 0;
+
+  font-size: 17px;
+  line-height: 18px;
+  font-family: inherit;
+
   background-color: transparent;
+  border: 2px solid  $black;
+
+  resize: none;
 
   &::placeholder {
-    font-family: inherit;
-    resize: none;
+    opacity: 0.3;
+  }
+
+  &:hover,
+  &:focus {
+    border-color: $light-green;
   }
 }

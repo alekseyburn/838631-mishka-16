@@ -41,6 +41,14 @@
     background-image: url("../../img/icon-video.svg");
     background-position: center center;
   }
+
+    &::after {
+    content: "";
+
+    min-height: inherit;
+
+    font-size: 0;
+  }
 }
 
 .production__embed {
@@ -112,4 +120,5 @@
 
 .production__order {
   margin: 0 $indent;
+  width: auto;
 }

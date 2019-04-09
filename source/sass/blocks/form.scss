@@ -1,7 +1,8 @@
 .form__item {
   margin: 0;
   padding: 0;
-
+  margin-top: 25px;
+  margin-bottom: $indent;
   border: none;
 }
 
@@ -23,7 +24,6 @@
     top: 50%;
     right: 0;
     left: 60px;
-    //сколько не пытался, не получилось сделать так, чтобы эта линия отходила от всех form-caption на одинаковое расстояние.
 
     height: 1px;
 
@@ -35,7 +35,6 @@
   @include reset-list;
 
   margin-top: 25px;
-  margin-bottom: $indent;
 }
 
 .form__field:not(:last-child) {
