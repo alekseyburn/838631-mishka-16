@@ -1,13 +1,15 @@
 .map {
   position: relative;
 
-  overflow: hidden;
   height: 457px;
+  overflow: hidden;
 }
 
 .map__widget {
   position: relative;
   z-index: 2;
+
+  width: 100%;
 }
 
 .map__img {

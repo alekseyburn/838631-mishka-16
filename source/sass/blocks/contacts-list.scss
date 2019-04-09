@@ -1,17 +1,17 @@
-.contacts-list__row {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: $indent;
-}
-
 .contacts-list__caption {
   width: 30%;
   padding: 0;
+  padding-top: 25px;
+
+  vertical-align: top;
 }
 
 .contacts-list__value {
   width: 70%;
   padding: 0;
+  padding-top: 26px;
+
+  vertical-align: top;
 }
 
 .contacts-list__email {

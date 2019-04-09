@@ -25,6 +25,7 @@
   min-height: 95px;
   margin: 0;
   padding-left: 89px;
+  padding-right: $indent;
 
   font-size: 17px;
   line-height: 24px;
@@ -38,7 +39,7 @@
     width: 32px;
     height: 23px;
 
-    background-image: url("../../img/icon-video.svg");
+    background-image: url("../img/icon-video.svg");
     background-position: center center;
   }
 
