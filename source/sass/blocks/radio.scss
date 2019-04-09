@@ -1,0 +1,44 @@
+.radio {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  min-height: 40px;
+  padding-left: 62px;
+
+  cursor: pointer;
+}
+
+.radio__btn {
+  position: absolute;
+  left: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+
+  border: 2px solid  $black;
+  border-radius: 50%;
+}
+
+.radio__control:checked + .radio__btn::before {
+  content: "";
+  position: absolute;
+
+  width: 16px;
+  height: 16px;
+
+  background-color: $light-green;
+  border-radius: 50%;
+}
+
+.radio__control:hover + .radio__btn,
+.radio__control:focus + .radio__btn {
+  border-color: $light-green;
+}
+
+.radio__control:active + .radio__btn {
+  border-color: $gray;
+}

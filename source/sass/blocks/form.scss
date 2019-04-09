@@ -1,0 +1,60 @@
+.form__item {
+  margin: 0;
+  padding: 0;
+
+  border: none;
+}
+
+.form__caption {
+  position: relative;
+
+  width: 100%;
+  padding: 0;
+
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 17px;
+  color: $light-green;
+  text-transform: uppercase;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    left: 60px;
+    //сколько не пытался, не получилось сделать так, чтобы эта линия отходила от всех form-caption на одинаковое расстояние.
+
+    height: 1px;
+
+    background-color: $light-green;
+  }
+}
+
+.form__list {
+  @include reset-list;
+
+  margin-top: 25px;
+  margin-bottom: $indent;
+}
+
+.form__field:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.form__label {
+  display: block;
+
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 18px;
+  color: $black;
+}
+
+.form__legend {
+  display: block;
+  margin-bottom: $indent;
+
+  font-size: 14px;
+  line-height: 16px;
+}
