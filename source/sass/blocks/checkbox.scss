@@ -7,6 +7,10 @@
   padding-left: 62px;
 
   cursor: pointer;
+
+  &:hover .checkbox__btn {
+    border-color: $light-green;
+  }
 }
 
 .checkbox__control {
@@ -41,7 +45,6 @@
   transform: translate(-50%, -50%);
 }
 
-.checkbox__control:hover + .checkbox__btn,
 .checkbox__control:focus + .checkbox__btn {
   border-color: $light-green;
 }

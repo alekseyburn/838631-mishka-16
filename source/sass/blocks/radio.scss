@@ -7,6 +7,10 @@
   padding-left: 62px;
 
   cursor: pointer;
+
+  &:hover .radio__btn {
+    border-color: $light-green;
+  }
 }
 
 .radio__control {
@@ -41,7 +45,6 @@
   transform: translate(-50%, -50%);
 }
 
-.radio__control:hover + .radio__btn,
 .radio__control:focus + .radio__btn {
   border-color: $light-green;
 }
