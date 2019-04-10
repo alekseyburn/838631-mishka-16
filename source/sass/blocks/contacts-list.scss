@@ -1,0 +1,34 @@
+.contacts-list__caption {
+  width: 30%;
+  padding: 0;
+  padding-top: 25px;
+
+  vertical-align: top;
+}
+
+.contacts-list__value {
+  width: 70%;
+  padding: 0;
+  padding-top: 26px;
+
+  vertical-align: top;
+}
+
+.contacts-list__email {
+  padding-bottom: 3px;
+
+  color: $black;
+
+  border-bottom: 1px solid $light-green;
+
+  &:hover,
+  &:focus {
+    color: $medium-green-hover;
+
+    border-bottom-color: $medium-green-hover;
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+}

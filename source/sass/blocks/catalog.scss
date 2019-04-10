@@ -1,9 +1,17 @@
+.catalog {
+  padding-bottom: 0;
+}
+
 .catalog__list {
   @include reset-list;
 }
 
 .catalog__item {
   margin-bottom: $indent;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 
   &:hover .catalog__wrapper {
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
@@ -77,6 +85,8 @@
 }
 
 .catalog__buy-icon {
+  overflow: hidden;
+
   opacity: 0.2;
 
   fill: black;

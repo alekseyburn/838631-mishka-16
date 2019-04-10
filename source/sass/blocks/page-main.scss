@@ -10,4 +10,12 @@
   color: $black;
 
   background-color: $light-gray;
+
+  &::after {
+    content: "";
+
+    min-height: inherit;
+
+    font-size: 0;
+  }
 }
