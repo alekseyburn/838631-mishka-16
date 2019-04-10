@@ -14,8 +14,8 @@
 
     background-image: url("../img/bg-zigzag-line.svg");
     background-repeat: repeat-x;
-    background-position: bottom 0;
-    background-size: contain;
+    background-position: bottom;
+    background-size: cover;
   }
 }
 
@@ -73,4 +73,68 @@
   font-size: 17px;
   line-height: 24px;
   text-align: center;
+}
+
+@media (min-width: $tablet-width) {
+  .weekly-good {
+    &::after {
+      height: 17px;
+
+      opacity: 0.1;
+    }
+  }
+
+  .weekly-good__wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .weekly-good__subtitle {
+    width: 80px;
+    margin-top: -46px;
+    margin-right: 22px;
+    margin-bottom: 53px;
+    margin-left: auto;
+
+    line-height: 17px;
+    text-align: center;
+  }
+
+  .weekly-good__description {
+    width: 50%;
+    margin-bottom: 35px;
+    padding-right: 50px;
+
+    font-size: 17px;
+    line-height: 30px;
+  }
+
+  .weekly-good__list {
+    width: 44%;
+    margin-bottom: 57px;
+  }
+
+  .weekly-good__caption {
+    padding-right: 0;
+  }
+
+  .weekly-good__img {
+    position: absolute;
+    top: 150px;
+    right: 50px;
+
+    width: 334px;
+  }
+
+  .weekly-good__price {
+    width: 50%;
+    margin-bottom: 33px;
+    padding-right: 50px;
+
+    font-size: 20px;
+  }
+
+  .weekly-good__button {
+    width: 43%;
+  }
 }

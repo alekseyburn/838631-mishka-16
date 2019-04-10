@@ -1,3 +1,9 @@
 .main-nav {
   background-color: $white;
 }
+
+@media (min-width: $tablet-width) {
+  .main-nav {
+    margin-left: auto;
+  }
+}

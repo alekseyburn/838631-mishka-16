@@ -7,3 +7,15 @@
   font-size: 25px;
   color: $black;
 }
+
+@media (min-width: $tablet-width) {
+  .section {
+    padding: 50px;
+    padding-bottom: 67px;
+  }
+
+  .section__title {
+    font-size: 43px;
+    line-height: 50px;
+  }
+}

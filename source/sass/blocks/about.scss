@@ -27,3 +27,52 @@
   line-height: 20px;
   color: $black;
 }
+
+@media (min-width: $tablet-width) {
+  .about__title {
+    margin-bottom: 53px;
+  }
+
+  .about__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .about__item {
+    width: 50%;
+    padding-right: 20px;
+
+
+    &--ecology {
+      order: 1;
+    }
+
+    &--knitting {
+      order: 2;
+    }
+
+    &--price {
+      order: 3;
+    }
+
+    &--support {
+      order: 4;
+    }
+
+    &--likes {
+      order: 5;
+    }
+
+    &--gift {
+      order: 6;
+    }
+  }
+
+  .about__text {
+    margin-bottom: 61px;
+
+    font-size: 20px;
+    line-height: 22px;
+  }
+}
