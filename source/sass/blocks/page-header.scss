@@ -1,4 +1,6 @@
 .page-header {
+  position: relative;
+
   display: flex;
   flex-direction: column;
 
@@ -11,7 +13,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 80px;
+  height: 80px; //удалил min*- потому что в шапке нет текста, а только картинка.
 
   border-bottom: 1px solid $gray;
 }
@@ -46,15 +48,21 @@
   cursor: pointer;
 }
 
+.page-header__delivery {
+  display: none;
+}
+
 @media (min-width: $tablet-width) {
   .page-header {
     flex-direction: row;
-    padding: 0 $tablet-padding;
+    padding: 0 $tablet-indent;
+
     border-bottom: 1px solid $gray;
   }
 
   .page-header__wrapper {
     min-height: 88px;
+
     border-bottom: none;
   }
 
@@ -65,5 +73,14 @@
 
   .page-header__toggle {
     display: none;
+  }
+
+  .page-header__delivery {
+    position: absolute;
+    right: $tablet-indent;
+    bottom: -44px;
+    z-index: 1;
+
+    display: block;
   }
 }

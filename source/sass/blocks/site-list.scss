@@ -5,32 +5,27 @@
 }
 
 .site-list__item {
-  position: relative;
-
   display: flex;
+
+  font-size: 17px;
+  line-height: 24px;
+
+  border-bottom: 1px solid $gray;
 }
 
 .site-list__link {
   position: relative;
 
   display: flex;
+  justify-content: flex-start;
   align-items: center;
   width: 100%;
-  min-height: 79px;
-  padding-right: $indent;
-  padding-left: $indent + 46px;
+  min-height: 78px;
+  padding-right: $mobile-indent;
+  padding-left: $mobile-indent + 46px;
 
   font-weight: bold;
-  font-size: 17px;
-  line-height: 24px;
   color: $black;
-
-  background-color: $white;
-  border-bottom: 1px solid $gray;
-
-  &--delivery {
-    display: none;
-  }
 
   &:hover,
   &:focus {
@@ -56,7 +51,7 @@
   position: absolute;
   top: 50%;
   left: 30px;
-  //выравнивание иконок по вертикали для ie11
+
   transform: translateY(-50%);
   opacity: 0.2;
 }
@@ -68,68 +63,39 @@
     justify-content: flex-end;
   }
 
+  .site-list__item {
+    border-bottom: none;
+  }
+
   .site-list__link {
+    z-index: 1;
+
+    width: auto; //при width100% появляется прокрутка на пустую облать. Не пойму почему.
     min-height: 88px;
     padding-right: 0;
-    padding-left: 83px;
-
-    border-bottom: none;
+    padding-left: 82px;
     border-left: 1px solid $gray;
-    z-index: 1;
 
     &--search {
       font-size: 0;
     }
 
-    &--catalog {
+    &--catalog,
+    &--order {
       position: absolute;
-      bottom: -43px;
-      left: -320px;
+      bottom: -42px;
+      left: $tablet-indent;
 
-      min-width: 167px;
       min-height: auto;
-      padding-right: 0;
       padding-left: 0;
 
       font-size: 15px;
 
-      background-color: transparent;
       border-left: none;
     }
 
     &--order {
-      position: absolute;
-      bottom: -43px;
-      left: -153px;
-
-      min-width: 167px;
-      min-height: auto;
-      padding-right: 0;
-      padding-left: 0;
-
-      font-size: 15px;
-
-      background-color: transparent;
-      border-left: none;
-    }
-
-    &--delivery {
-      position: absolute;
-      right: -349px;
-      bottom: -43px;
-
-      display: block;
-      min-width: 231px;
-      min-height: auto;
-      padding-right: 0;
-      padding-left: 0;
-
-      font-weight: normal;
-      font-size: 15px;
-      color: $main-text;
-
-      background-color: transparent;
-      border-left: none;
+      left: 216px;
     }
   }
 }
