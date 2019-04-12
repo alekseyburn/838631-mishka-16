@@ -54,6 +54,7 @@
 
   transform: translateY(-50%);
   opacity: 0.2;
+  overflow: hidden; //в ie на tablet была проблема с гориз. прокруткой
 }
 
 @media (min-width: $tablet-width) {

@@ -32,3 +32,31 @@
     }
   }
 }
+
+@media (min-width: $tablet-width) {
+  .contacts-list {
+    font-size: 17px;
+    display: flex;
+  }
+
+  .contacts-list tbody {
+    display: flex;
+    flex-wrap: wrap; //на случай добавления новых данных
+  }
+
+  .contacts-list__row {
+    width: 50%;
+    display: flex;
+  }
+
+  .contacts-list__caption  {
+    width: auto;
+    display: block;
+    margin-right: 25px;
+  }
+
+  .contacts-list__value {
+    display: block;
+    width: auto;
+  }
+}

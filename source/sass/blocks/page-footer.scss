@@ -26,21 +26,25 @@
 
 @media (min-width: $tablet-width) {
   .page-footer {
-    padding: 54px 50px 60px;
+    padding: $tablet-indent;
+    padding-top: $tablet-indent + 5px;
   }
 
   .page-footer__wrapper {
     display: flex;
+    justify-content: space-around;
     align-items: center;
   }
 
   .page-footer__logo {
     display: block;
-    margin-right: 160px;
+    margin-right: auto;
   }
 
   .page-footer__social {
+    margin-left: 80px;
     padding-bottom: 0;
+
     border-bottom: none;
   }
 

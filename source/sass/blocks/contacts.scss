@@ -10,7 +10,52 @@
 }
 
 .contacts__map {
+  margin-right: -$mobile-indent;
   margin-bottom: 38px;
-  margin-left: -30px;
-  margin-right: -30px;
+  margin-left: -$mobile-indent;
+}
+
+@media (min-width: $tablet-width) {
+  .contacts {
+    position: relative;
+
+    padding-bottom: 57px;
+    padding-left: 47px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 47px;
+      right: 53px;
+
+      width: 47px;
+      height: 81px;
+
+      background-image: url("../img/icon-flag.svg");
+    }
+  }
+
+  .contacts__title {
+    margin-top: 11px;
+    margin-bottom: 25px;
+
+    font-size: 43px;
+    line-height: 50px;
+    color: $black;
+  }
+
+  .contacts__table {
+    margin-bottom: 54px;
+  }
+
+  .contacts__map {
+    margin-right: -$tablet-indent;
+    margin-bottom: 55px;
+    margin-left: -$tablet-indent;
+  }
+
+  .contacts__write {
+    width: 34%;
+    margin: 0 auto;
+  }
 }
