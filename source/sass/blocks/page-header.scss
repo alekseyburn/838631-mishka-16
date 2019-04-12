@@ -13,7 +13,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 80px; //удалил min*- потому что в шапке нет текста, а только картинка.
+  height: 80px;
 
   border-bottom: 1px solid $gray;
 }
@@ -82,5 +82,19 @@
     z-index: 1;
 
     display: block;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-header__wrapper {
+    position: absolute;
+    left: 50%;
+
+    transform: translateX(-50%);
+  }
+
+  .page-header__logo {
+    width: 149px;
+    height: 72px;
   }
 }

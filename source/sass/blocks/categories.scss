@@ -175,3 +175,18 @@
     }
   }
 }
+
+@media (min-width: $desktop-width) {
+  .categories__lead {
+    font-size: 53px;
+    line-height: 57px;
+  }
+
+  .categories__list {
+    &::after {
+      bottom: -15px;
+
+      height: 34px;
+    }
+  }
+}

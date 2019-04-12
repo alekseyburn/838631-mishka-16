@@ -7,3 +7,10 @@
     margin-left: auto;
   }
 }
+
+@media (min-width: $desktop-width) {
+  .main-nav {
+    margin-left: 0;
+    width: 100%;
+  }
+}

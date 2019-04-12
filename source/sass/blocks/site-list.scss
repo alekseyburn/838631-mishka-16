@@ -9,8 +9,6 @@
 
   font-size: 17px;
   line-height: 24px;
-
-  border-bottom: 1px solid $gray;
 }
 
 .site-list__link {
@@ -26,6 +24,13 @@
 
   font-weight: bold;
   color: $black;
+
+  border-bottom: 1px solid $gray;
+
+  &--new,
+  &--sale {
+    display: none;
+  }
 
   &:hover,
   &:focus {
@@ -52,9 +57,10 @@
   top: 50%;
   left: 30px;
 
+  overflow: hidden; //в ie на tablet была проблема с гориз. прокруткой
+
   transform: translateY(-50%);
   opacity: 0.2;
-  overflow: hidden; //в ie на tablet была проблема с гориз. прокруткой
 }
 
 @media (min-width: $tablet-width) {
@@ -64,10 +70,6 @@
     justify-content: flex-end;
   }
 
-  .site-list__item {
-    border-bottom: none;
-  }
-
   .site-list__link {
     z-index: 1;
 
@@ -75,12 +77,18 @@
     min-height: 88px;
     padding-right: 0;
     padding-left: 82px;
+
+    border-bottom: none;
     border-left: 1px solid $gray;
 
     &--search {
       font-size: 0;
     }
+  }
+}
 
+@media (min-width: $tablet-width) and (max-width: $tablet-width-only) {
+  .site-list__link {
     &--catalog,
     &--order {
       position: absolute;
@@ -97,6 +105,48 @@
 
     &--order {
       left: 216px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .site-list {
+    justify-content: flex-start;
+  }
+
+  .site-list__item:nth-child(3) {
+    margin-left: auto;
+  }
+
+  .site-list__link {
+    &--catalog {
+      margin-right: 35px;
+      padding-left: 0;
+
+      border-left: none;
+    }
+
+    &--order {
+      padding-left: 35px;
+    }
+
+    &--new,
+    &--sale {
+      position: absolute;
+      bottom: -42px;
+      left: $tablet-indent;
+
+      display: block;
+      min-height: auto;
+      padding-left: 0;
+
+      font-size: 15px;
+
+      border-left: none;
+    }
+
+    &--sale {
+      left: 270px;
     }
   }
 }
