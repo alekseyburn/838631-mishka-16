@@ -1,6 +1,9 @@
 .weekly-good {
   position: relative;
 
+  display: flex;
+  flex-direction: column;
+
   background-color: $white;
 
   &::after {
@@ -15,7 +18,8 @@
     background-image: url("../img/bg-zigzag-line.svg");
     background-repeat: repeat-x;
     background-position: bottom;
-    background-size: cover;
+    background-size: contain;
+    opacity: 0.1;
   }
 }
 
@@ -62,12 +66,13 @@
 }
 
 .weekly-good__img {
-  margin-bottom: 15px;
+  display: block;
+  margin-bottom: 23px;
 }
 
 .weekly-good__price {
   margin: 0;
-  margin-bottom: 24px;
+  margin-bottom: 25px;
 
   font-weight: bold;
   font-size: 17px;
@@ -77,41 +82,45 @@
 
 @media (min-width: $tablet-width) {
   .weekly-good {
+    padding-top: 45px;
+    padding-bottom: 38px;
     &::after {
-      height: 17px;
-
-      opacity: 0.1;
+      height: 15px;
     }
   }
 
   .weekly-good__wrapper {
+    position: relative;
+
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 32px;
+  }
+
+  .weekly-good__wrapper--half {
+    width: 50%;
+    padding-right: 50px;
   }
 
   .weekly-good__subtitle {
     width: 80px;
-    margin-top: -46px;
-    margin-right: 22px;
-    margin-bottom: 53px;
-    margin-left: auto;
+    margin-top: 10px;
+    margin-right: 23px;
 
     line-height: 17px;
     text-align: center;
   }
 
   .weekly-good__description {
-    width: 50%;
     margin-bottom: 35px;
-    padding-right: 50px;
 
     font-size: 17px;
     line-height: 30px;
   }
 
   .weekly-good__list {
-    width: 44%;
-    margin-bottom: 57px;
+    margin-bottom: 58px;
   }
 
   .weekly-good__caption {
@@ -120,21 +129,21 @@
 
   .weekly-good__img {
     position: absolute;
-    top: 150px;
-    right: 50px;
+    top: 7px;
+    right: -100%;
 
-    width: 334px;
+    width: 333px;
   }
 
   .weekly-good__price {
-    width: 50%;
-    margin-bottom: 33px;
-    padding-right: 50px;
+    margin: 0 auto;
+    margin-top: auto;
+    margin-bottom: 34px;
 
     font-size: 20px;
   }
 
   .weekly-good__button {
-    width: 43%;
+    width: 100%;
   }
 }
