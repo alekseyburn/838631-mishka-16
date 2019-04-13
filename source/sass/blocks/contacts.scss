@@ -32,6 +32,7 @@
       height: 81px;
 
       background-image: url("../img/icon-flag.svg");
+      background-repeat: no-repeat;//да - он здесь нужен)
     }
   }
 
@@ -57,5 +58,46 @@
   .contacts__write {
     width: 34%;
     margin: 0 auto;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .contacts {
+    position: relative;
+
+    padding-top: 130px;
+    padding-bottom: 106px;
+    padding-left: 220px;
+
+    &::after {
+      top: 134px;
+      left: 113px;
+    }
+  }
+
+  .contacts__title {
+    margin-bottom: 24px;
+
+    font-size: 53px;
+    line-height: 57px;
+  }
+
+  .contacts-list {
+    margin-bottom: 71px;
+  }
+
+  .contacts__map {
+    position: absolute;
+    top: 72px;
+    right: 50px;
+
+    width: 525px;
+    height: 460px;
+    margin: 0;
+  }
+
+  .contacts__write {
+    width: 27%;
+    margin: 0;
   }
 }

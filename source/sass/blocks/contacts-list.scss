@@ -49,7 +49,7 @@
     display: flex;
   }
 
-  .contacts-list__caption  {
+  .contacts-list__caption {
     width: auto;
     display: block;
     margin-right: 25px;
@@ -58,5 +58,15 @@
   .contacts-list__value {
     display: block;
     width: auto;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .contacts-list tbody {
+    display: table;
+  }
+
+  .contacts-list__row {
+    margin-bottom: 4px;
   }
 }

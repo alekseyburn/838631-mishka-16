@@ -32,6 +32,7 @@
   .about {
     padding-bottom: 23px;
   }
+
   .about__title {
     margin-bottom: $tablet-indent;
   }
@@ -44,8 +45,8 @@
 
   .about__item {
     width: 50%;
-    padding-right: 20px;
     margin-bottom: 30px;
+    padding-right: 20px;
 
     &--ecology {
       order: 1;
@@ -75,5 +76,14 @@
   .about__text {
     font-size: 20px;
     line-height: 22px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .about {
+    padding-top: 54px;
+    padding-right: 225px;
+    padding-bottom: 30px;
+    padding-left: 225px;
   }
 }
