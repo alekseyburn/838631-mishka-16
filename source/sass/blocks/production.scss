@@ -3,6 +3,8 @@
 }
 
 .production__wrapper {
+  display: flex;
+  flex-direction: column;
   padding-bottom: $mobile-indent;
 
   border: 1px solid  $gray;
@@ -24,8 +26,8 @@
   align-items: center;
   min-height: 95px;
   margin: 0;
-  padding-left: 89px;
   padding-right: $mobile-indent;
+  padding-left: 89px;
 
   font-size: 17px;
   line-height: 24px;
@@ -55,6 +57,7 @@
 .production__embed {
   position: relative;
 
+  order: 2;
   width: 100%;
   height: 0;
   padding-bottom: 56.25%;
@@ -112,6 +115,7 @@
 }
 
 .production__text {
+  order: 3;
   margin: 0;
   padding: $mobile-indent;
 
@@ -120,6 +124,96 @@
 }
 
 .production__order {
+  order: 4;
   width: auto;
   margin: 0 $mobile-indent;
+}
+
+@media (min-width: $tablet-width) {
+  .production__wrapper {
+    padding-bottom: 44px;
+  }
+
+  .production__title {
+    display: block;
+    justify-content: flex-start;
+    order: 2;
+    margin-bottom: 2px;
+    padding-top: 42px;
+    padding-left: 105px;
+
+    font-size: 20px;
+
+    &::before {
+      left: 40px;
+    }
+  }
+
+  .production__embed {
+    min-height: 455px; // для соответствия высоте. Думаю, что когда будут меняться изображения, то все будет нормально.
+  }
+
+  .production__text {
+    order: 3;
+    margin-bottom: 6px;
+    padding-top: 0;
+    padding-right: 40px;
+    padding-left: 40px;
+
+    font-size: 15px;
+    line-height: 30px;
+  }
+
+  .production__order {
+    order: 4;
+    margin: 0 40px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .production {
+    padding-top: 5px;
+    padding-bottom: 88px;
+  }
+
+  .production__wrapper {
+    display: block;
+    min-height: 455px;
+  }
+
+  .production__embed {
+    float: left;
+    width: 682px;
+    height: 455px;
+    padding-bottom: 0;
+  }
+
+  .production__title {
+    display: block;
+    float: right;
+    width: 290px;
+    margin-bottom: 25px;
+    padding-top: 95px;
+    padding-right: 60px;
+    padding-left: 0;
+
+    &::before {
+      top: 45px;
+      left: 3px;
+    }
+  }
+
+  .production__text {
+    float: right;
+    width: 290px;
+    margin-bottom: 16px;
+    padding-right: 60px;
+    padding-left: 0;
+  }
+
+  .production__order {
+    float: right;
+    width: 22%;
+    margin-right: 60px;
+  }
 }
