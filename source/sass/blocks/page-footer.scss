@@ -37,7 +37,7 @@
 @media (min-width: $tablet-width) {
   .page-footer {
     padding: $tablet-indent;
-    padding-top: $tablet-indent + 5px;
+    padding-bottom: 55px;
   }
 
   .page-footer__wrapper {
@@ -52,14 +52,13 @@
   }
 
   .page-footer__social {
+    margin-bottom: 0;
     margin-left: 80px;
-    padding-bottom: 0;
 
     border-bottom: none;
   }
 
   .page-footer__copyright {
     margin-left: auto;
-    padding: 0;
   }
 }

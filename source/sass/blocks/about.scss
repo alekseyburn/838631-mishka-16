@@ -11,6 +11,15 @@
   @include reset-list;
 }
 
+.about__item {
+  margin-bottom: 25px;
+
+  &:last-child {
+    margin-bottom: 0;
+    // При добавлении нового элемента это не сработает. Используются ли в БЭМе :last-child и подобное? Можно ли как-то правильнее переопределить маргин для последнего элемента в списке?;
+  }
+}
+
 .about__icon {
   height: 37px; //задал всем иконкам общую высоту, теперь отступы выглядят как в макете(плюс-минус)
   margin-left: 5px;
@@ -23,7 +32,6 @@
 
 .about__text {
   margin: 0;
-  margin-bottom: 25px;
 
   font-weight: bold;
   font-size: 17px;
@@ -31,20 +39,7 @@
   color: $black;
 }
 
-.about__item {
-  &:last-child {
-    .about__text {
-      margin-bottom: 0;
-      // При добавлении нового элемента это не сработает. Используются ли в БЭМе :last-child и подобное? Можно ли как-то правильнее переопределить маргин для последнего элемента в списке?;
-    }
-  }
-}
-
 @media (min-width: $tablet-width) {
-  .about {
-    padding-bottom: 23px;
-  }
-
   .about__title {
     margin-bottom: $tablet-indent;
   }
@@ -57,8 +52,7 @@
 
   .about__item {
     width: 50%;
-    margin-bottom: 30px;
-    padding-right: 20px;
+    margin-bottom: 55px;
 
     &--ecology {
       order: 1;
@@ -78,11 +72,18 @@
 
     &--likes {
       order: 5;
+      margin-bottom: 0;
     }
 
     &--gift {
       order: 6;
+      margin-bottom: 0;
     }
+  }
+
+  .about__icon {
+    margin-left: 0;
+    margin-bottom: 18px;
   }
 
   .about__text {

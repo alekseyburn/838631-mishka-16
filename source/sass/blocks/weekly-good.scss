@@ -100,8 +100,6 @@
 @media (min-width: $tablet-width) {
   .weekly-good {
     display: block;
-    padding-top: 45px;
-    padding-bottom: 38px;
 
     &::after {
       height: 15px;
@@ -110,13 +108,23 @@
 
   .weekly-good__title-wrapper {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
     margin-bottom: 32px;
   }
 
+  .weekly-good__title {
+    flex-grow: 1;
+  }
+
+  .weekly-good__subtitle {
+    width: 80px;
+    margin-top: 10px; //можно ли как-то выорвнять содержимое weekly-good__title-wrapper без задания высоты? align-items в разных значениях не помог.
+    margin-right: 23px;
+
+    line-height: 17px;
+    text-align: center;
+  }
+
   .weekly-good__info-wrapper {
-    display: block;
     width: 50%;
     min-height: 244px;
     padding-right: $tablet-indent;
@@ -124,15 +132,6 @@
     &:last-of-type {
       min-height: auto;
     }
-  }
-
-  .weekly-good__subtitle {
-    width: 80px;
-    margin-top: 10px;
-    margin-right: 23px;
-
-    line-height: 17px;
-    text-align: center;
   }
 
   .weekly-good__img {
@@ -151,7 +150,7 @@
   }
 
   .weekly-good__list {
-    margin-bottom: 58px;
+    margin-bottom: 55px;
   }
 
   .weekly-good__caption {
@@ -159,14 +158,9 @@
   }
 
   .weekly-good__price {
-    margin: 0 auto;
-    margin-bottom: 34px;
+    margin-bottom: 35px;
 
     font-size: 20px;
-  }
-
-  .weekly-good__button {
-    width: 100%;
   }
 }
 
@@ -194,6 +188,7 @@
       margin-bottom: 0;
     }
   }
+
   .weekly-good__title {
     z-index: 2;
 

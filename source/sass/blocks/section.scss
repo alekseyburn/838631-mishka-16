@@ -24,6 +24,23 @@
 @media (min-width: $tablet-width) {
   .section {
     padding: $tablet-indent;
+    padding-top: 45px;
+    padding-bottom: 70px;
+
+    &--about {
+      padding-top: $tablet-indent;
+      padding-bottom: 80px;
+    }
+
+    &--reviews {
+      padding-top: 80px;
+      padding-bottom: 100px;
+    }
+
+    &--contacts {
+      padding-top: 60px;
+      padding-bottom: 60px;
+    }
   }
 
   .section__title {

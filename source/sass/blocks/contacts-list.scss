@@ -44,7 +44,6 @@
 @media (min-width: $tablet-width) {
   .contacts-list {
     font-size: 17px;
-    display: flex;
   }
 
   .contacts-list tbody {
@@ -53,19 +52,12 @@
   }
 
   .contacts-list__row {
-    width: 50%;
     display: flex;
+    width: 50%;
   }
 
   .contacts-list__caption {
-    width: auto;
-    display: block;
-    margin-right: 25px;
-  }
-
-  .contacts-list__value {
-    display: block;
-    width: auto;
+    padding-right: 25px;
   }
 }
 
