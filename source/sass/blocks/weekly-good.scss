@@ -23,14 +23,8 @@
   }
 }
 
-.weekly-good__wrapper {
-  &--half {
-    order: 1;
-
-    &:last-of-type {
-      order: 3;
-    }
-  }
+.weekly-good__title-wrapper {
+  order: 1;
 }
 
 .weekly-good__title {
@@ -47,6 +41,15 @@
   line-height: 20px;
   color: $light-green;
   text-transform: uppercase;
+}
+
+.weekly-good__img {
+  order: 3;
+  margin-bottom: 23px;
+}
+
+.weekly-good__info-wrapper {
+  order: 2;
 }
 
 .weekly-good__description {
@@ -75,10 +78,8 @@
   padding-right: 12px;
 }
 
-.weekly-good__img {
-  display: block;
-  order: 2;
-  margin-bottom: 23px;
+.weekly-good__order-wrapper {
+  order: 4;
 }
 
 .weekly-good__price {
@@ -102,16 +103,15 @@
     }
   }
 
-  .weekly-good__wrapper {
-    position: relative;
-
+  .weekly-good__title-wrapper {
+    // position: relative;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     margin-bottom: 32px;
   }
 
-  .weekly-good__wrapper--half {
+  .weekly-good__info-wrapper {
     display: block;
     width: 50%;
     min-height: 244px;
@@ -131,6 +131,15 @@
     text-align: center;
   }
 
+  .weekly-good__img {
+    position: relative;
+    top: 9px;
+
+    display: block;
+    float: right;
+    width: 333px;
+  }
+
   .weekly-good__description {
     margin-bottom: 35px;
 
@@ -144,15 +153,6 @@
 
   .weekly-good__caption {
     padding-right: 0;
-  }
-
-  .weekly-good__img {
-    position: relative;
-    top: 9px;
-
-    display: block;
-    float: right;
-    width: 333px;
   }
 
   .weekly-good__price {
@@ -177,21 +177,20 @@
     }
   }
 
-  .weekly-good__wrapper {
+  .weekly-good__title-wrapper {
     justify-content: flex-start;
     margin-bottom: 35px;
-
-    &--half {
-      width: 32%;
-      margin-bottom: 108px;
-      margin-left: 175px;
-
-      &:last-of-type {
-        margin-bottom: 0;
-      }
-    }
   }
 
+  .weekly-good__info-wrapper {
+    width: 32%;
+    margin-bottom: 108px;
+    margin-left: 175px;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
   .weekly-good__title {
     z-index: 2;
 

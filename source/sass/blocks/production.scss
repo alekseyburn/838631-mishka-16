@@ -150,7 +150,7 @@
   }
 
   .production__embed {
-    min-height: 455px; // для соответствия высоте. Думаю, что когда будут меняться изображения, то все будет нормально.
+    padding-bottom: 68%;
   }
 
   .production__text {
@@ -178,14 +178,13 @@
 
   .production__wrapper {
     display: block;
-    min-height: 455px;
+    min-height: 456px;
   }
 
   .production__embed {
     float: left;
     width: 682px;
-    height: 455px;
-    padding-bottom: 0;
+    padding-bottom: 43%;
   }
 
   .production__title {

@@ -24,9 +24,13 @@
 
 .catalog__img {
   display: block;
+  position: relative;
+  z-index: 2;
 }
 
 .catalog__wrapper {
+  position: relative;
+  z-index: 1;
   padding: 28px;
   padding-bottom: 22px;
 
@@ -111,10 +115,6 @@
     width: 50%;
   }
 
-  .catalog__img {
-    min-height: 334px;
-  }
-
   .catalog__wrapper {
     display: flex;
     flex-direction: column;
@@ -163,10 +163,6 @@
 
   .catalog__img-link {
     width: auto;
-  }
-
-  .catalog__img {
-    height: 462px;
   }
 
   .catalog__wrapper {
