@@ -108,7 +108,8 @@
 
   .weekly-good__title-wrapper {
     display: flex;
-    margin-bottom: 32px;
+    margin-bottom: 45px;
+    align-items: center;
   }
 
   .weekly-good__title {
@@ -117,8 +118,7 @@
 
   .weekly-good__subtitle {
     width: 80px;
-    margin-top: 10px;
-    //можно ли как-то выорвнять содержимое weekly-good__title-wrapper без задания высоты? align-items в разных значениях не помог.
+    margin-bottom: 0;
     margin-right: 23px;
 
     line-height: 17px;
@@ -133,6 +133,7 @@
 
     &:last-of-type {
       min-height: auto;
+      margin-bottom: 0;
     }
   }
 
@@ -174,7 +175,7 @@
   }
 
   .weekly-good__title-wrapper {
-    margin-bottom: 35px;
+    margin-bottom: 45px;
   }
 
   .weekly-good__title {
@@ -184,7 +185,6 @@
   }
 
   .weekly-good__subtitle {
-    margin-top: 15px;
     margin-right: 50px;
     margin-left: 40px;
   }

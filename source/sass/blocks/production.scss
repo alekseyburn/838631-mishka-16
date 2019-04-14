@@ -1,7 +1,3 @@
-.production {
-  margin-bottom: 16px;
-}
-
 .production__wrapper {
   display: flex;
   flex-direction: column;
@@ -22,12 +18,12 @@
   position: relative;
 
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   min-height: 95px;
   margin: 0;
   padding-right: $mobile-indent;
-  padding-left: 89px;
+  padding-left: 90px;
 
   font-size: 17px;
   line-height: 24px;
@@ -46,6 +42,7 @@
   }
 
   &::after {
+    //fix min-height для ie11
     content: "";
 
     min-height: inherit;
@@ -79,23 +76,11 @@
 }
 
 .production__link {
-  position: absolute;
-  top: 0;
-  left: 0;
-
-  width: 100%;
-  height: 100%;
+  display: block;
 }
 
 .production__img {
-  position: absolute;
-  top: 0;
-  left: 0;
-
   display: block;
-  width: 100%;
-
-  border: none;
 }
 
 .production__button {
@@ -117,7 +102,8 @@
 .production__text {
   order: 3;
   margin: 0;
-  padding: $mobile-indent;
+  padding: 33px;
+  padding-bottom: 25px;
 
   font-size: 13px;
   line-height: 24px;
@@ -131,15 +117,14 @@
 
 @media (min-width: $tablet-width) {
   .production__wrapper {
-    padding-bottom: 44px;
+    padding-bottom: 45px;
   }
 
   .production__title {
     display: block;
-    justify-content: flex-start;
     order: 2;
-    margin-bottom: 2px;
-    padding-top: 42px;
+    min-height: auto;
+    margin-bottom: 25px;
     padding-left: 105px;
 
     font-size: 20px;
@@ -150,15 +135,15 @@
   }
 
   .production__embed {
-    padding-bottom: 68%;
+    margin-bottom: 40px;
+    padding-bottom: 68.1%;
+    overflow: hidden;
   }
 
   .production__text {
     order: 3;
-    margin-bottom: 6px;
-    padding-top: 0;
-    padding-right: 40px;
-    padding-left: 40px;
+    margin-bottom: 35px;
+    padding: 0 40px;
 
     font-size: 15px;
     line-height: 30px;
@@ -168,14 +153,20 @@
     order: 4;
     margin: 0 40px;
   }
+
+  .production__img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    width: auto;
+    height: 100%;
+
+    transform: translate(-50%, -50%);
+  }
 }
 
 @media (min-width: $desktop-width) {
-  .production {
-    padding-top: 5px;
-    padding-bottom: 88px;
-  }
-
   .production__wrapper {
     display: block;
     min-height: 456px;
@@ -184,11 +175,11 @@
   .production__embed {
     float: left;
     width: 682px;
-    padding-bottom: 43%;
+    margin-bottom: 0;
+    padding-bottom: 43.3%;
   }
 
   .production__title {
-    display: block;
     float: right;
     width: 290px;
     margin-bottom: 25px;
@@ -205,14 +196,14 @@
   .production__text {
     float: right;
     width: 290px;
-    margin-bottom: 16px;
+    margin-bottom: 50px;
     padding-right: 60px;
     padding-left: 0;
   }
 
   .production__order {
     float: right;
-    width: 22%;
+    width: 230px;
     margin-right: 60px;
   }
 }

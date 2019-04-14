@@ -47,7 +47,7 @@
   line-height: 24px;
   color: $white;
 
-  &::before {
+  &::before { //fix ie11 min-height
     content: "";
 
     min-height: inherit;

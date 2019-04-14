@@ -12,7 +12,7 @@
   background-color: $light-gray;
 
   &::after {
-    content: "";
+    content: ""; //fix ie11 min-height
 
     min-height: inherit;
 

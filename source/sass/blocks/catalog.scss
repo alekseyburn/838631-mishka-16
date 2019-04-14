@@ -1,7 +1,3 @@
-.catalog {
-  padding-bottom: 0;
-}
-
 .catalog__list {
   @include reset-list;
 }
@@ -13,33 +9,28 @@
     margin-bottom: 0;
   }
 
-  &:hover .catalog__wrapper {
+  &:hover {
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
   }
 
-  &:active .catalog__wrapper {
+  &:active {
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
   }
 }
 
 .catalog__img {
   display: block;
-  position: relative;
-  z-index: 2;
 }
 
 .catalog__wrapper {
-  position: relative;
-  z-index: 1;
   padding: 28px;
-  padding-bottom: 22px;
 
   border: 1px solid  $gray;
 }
 
 .catalog__link {
   display: block;
-  margin-bottom: 3px;
+  margin-bottom: 2px;
 
   font-weight: bold;
   font-size: 17px;
@@ -58,7 +49,7 @@
 
 .catalog__info {
   margin: 0;
-  margin-bottom: 19px;
+  margin-bottom: 20px;
 
   font-size: 13px;
 }
@@ -76,6 +67,8 @@
 }
 
 .catalog__cart-btn {
+  display: block;
+
   &:hover .catalog__buy-icon,
   &:focus .catalog__buy-icon {
     opacity: 1;
@@ -89,6 +82,7 @@
 }
 
 .catalog__buy-icon {
+  display: block;
   overflow: hidden;
 
   opacity: 0.2;
@@ -96,11 +90,7 @@
   fill: black;
 }
 
-@media (min-width: $tablet-width) /*and (max-width: $tablet-width-only)*/ {
-  .catalog {
-    padding-top: 68px;
-  }
-
+@media (min-width: $tablet-width) {
   .catalog__list {
     display: flex;
     flex-direction: column;
@@ -108,7 +98,7 @@
 
   .catalog__item {
     display: flex;
-    margin-bottom: 53px;
+    margin-bottom: 55px;
   }
 
   .catalog__img-link {
@@ -120,7 +110,8 @@
     flex-direction: column;
     width: 50%;
     padding: 25px;
-    padding-bottom: 20px;
+    padding-top: 22px;
+    padding-bottom: 30px;
   }
 
   .catalog__link {
@@ -146,10 +137,6 @@
 }
 
 @media (min-width: $desktop-width) {
-  .catalog {
-    padding-top: 145px;
-  }
-
   .catalog__list {
     flex-direction: row;
     flex-wrap: wrap;
@@ -159,6 +146,7 @@
   .catalog__item {
     flex-direction: column;
     width: 317px;
+    margin-bottom: 0;
   }
 
   .catalog__img-link {
@@ -166,12 +154,14 @@
   }
 
   .catalog__wrapper {
+    flex: 1;
+    flex-basis: auto; //fix высоты для ie11
     width: auto;
-    min-height: 197px; // не смог разобраться как сделать их все одинаковой высоты без задания этой высоты.
+    padding: 26px;
   }
 
   .catalog__info {
-    margin-bottom: 0;
+    margin-bottom: 15px;
   }
 
   .catalog__buy-wrapper {

@@ -60,5 +60,9 @@
 
   .page-footer__copyright {
     margin-left: auto;
+
+    &::before {
+      content: none;
+    }
   }
 }
