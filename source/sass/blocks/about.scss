@@ -12,7 +12,10 @@
 }
 
 .about__icon {
-  margin-bottom: $mobile-indent / 3;
+  height: 37px; //задал всем иконкам общую высоту, теперь отступы выглядят как в макете(плюс-минус)
+  margin-left: 5px;
+  display: block;
+  margin-bottom: 21px;
   overflow: hidden;
 
   fill: $light-green;
@@ -20,12 +23,21 @@
 
 .about__text {
   margin: 0;
-  margin-bottom: $mobile-indent;
+  margin-bottom: 25px;
 
   font-weight: bold;
   font-size: 17px;
   line-height: 20px;
   color: $black;
+}
+
+.about__item {
+  &:last-child {
+    .about__text {
+      margin-bottom: 0;
+      // При добавлении нового элемента это не сработает. Используются ли в БЭМе :last-child и подобное? Можно ли как-то правильнее переопределить маргин для последнего элемента в списке?;
+    }
+  }
 }
 
 @media (min-width: $tablet-width) {

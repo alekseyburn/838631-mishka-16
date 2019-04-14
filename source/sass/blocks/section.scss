@@ -1,6 +1,19 @@
 .section {
   padding: $mobile-indent;
-  padding-bottom: 42px;
+
+  &--weekly-good {
+    padding-bottom: 40px;
+  }
+
+  &--reviews {
+    padding-top: 20px;
+    padding-bottom: 50px;
+  }
+
+  &--contacts {
+    padding-top: 35px;
+    padding-bottom: 40px;
+  }
 }
 
 .section__title {

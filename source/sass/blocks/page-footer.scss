@@ -15,13 +15,23 @@
 }
 
 .page-footer__social {
-  padding-bottom: 17px;
-
-  border-bottom: 1px solid $gray;
+  margin-bottom: 50px;
 }
 
 .page-footer__copyright {
-  padding: 19px 40px 0;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    right: 0;
+    left: 0;
+
+    height: 1px;
+
+    background-color: $gray;
+  }
 }
 
 @media (min-width: $tablet-width) {

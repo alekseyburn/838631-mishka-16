@@ -1,21 +1,29 @@
+.contacts-list {
+  border-collapse: collapse;
+}
+
+.contacts-list__row {
+  display: block;
+  margin-bottom: 30px;
+
+  &:last-child {
+    margin-bottom: 0; //опять же вопрос про last-child - используется ли он
+  }
+}
+
 .contacts-list__caption {
-  width: 30%;
   padding: 0;
-  padding-top: 25px;
+  padding-right: 30px;
 
   vertical-align: top;
 }
 
 .contacts-list__value {
-  width: 70%;
   padding: 0;
-  padding-top: 26px;
-
-  vertical-align: top;
 }
 
 .contacts-list__email {
-  padding-bottom: 3px;
+  padding-bottom: 4px;
 
   color: $black;
 
