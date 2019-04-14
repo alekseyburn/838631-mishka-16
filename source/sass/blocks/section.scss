@@ -50,6 +50,33 @@
 }
 
 @media (min-width: $desktop-width) {
+  .section {
+    &--weekly-good {
+      padding-top: 122px;
+      padding-bottom: 100px;
+    }
+
+    &--about {
+      padding-top: 55px;
+      padding-right: 225px;
+      padding-bottom: 90px;
+      padding-left: 225px;
+    }
+
+    &--reviews {
+      margin-left: $tablet-indent;
+      padding-top: 70px;
+      padding-bottom: 155px;
+      padding-left: 175px;
+    }
+
+    &--contacts {
+      padding-top: 145px;
+      padding-bottom: 106px;
+      padding-left: 225px;
+    }
+  }
+
   .section__title {
     font-size: 53px;
     line-height: 57px;

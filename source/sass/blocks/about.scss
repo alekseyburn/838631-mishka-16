@@ -21,10 +21,11 @@
 }
 
 .about__icon {
-  height: 37px; //задал всем иконкам общую высоту, теперь отступы выглядят как в макете(плюс-минус)
-  margin-left: 5px;
   display: block;
+  height: 37px;
+  //задал всем иконкам общую высоту, теперь отступы выглядят как в макете(плюс-минус)
   margin-bottom: 21px;
+  margin-left: 5px;
   overflow: hidden;
 
   fill: $light-green;
@@ -82,21 +83,12 @@
   }
 
   .about__icon {
-    margin-left: 0;
     margin-bottom: 18px;
+    margin-left: 0;
   }
 
   .about__text {
     font-size: 20px;
     line-height: 22px;
-  }
-}
-
-@media (min-width: $desktop-width) {
-  .about {
-    padding-top: 54px;
-    padding-right: 225px;
-    padding-bottom: 30px;
-    padding-left: 225px;
   }
 }

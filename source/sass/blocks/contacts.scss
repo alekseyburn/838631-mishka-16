@@ -61,10 +61,6 @@
   .contacts {
     position: relative;
 
-    padding-top: 130px;
-    padding-bottom: 106px;
-    padding-left: 220px;
-
     &::after {
       top: 134px;
       left: 113px;
@@ -72,14 +68,14 @@
   }
 
   .contacts__title {
-    margin-bottom: 24px;
+    margin-bottom: 45px;
 
     font-size: 53px;
     line-height: 57px;
   }
 
   .contacts-list {
-    margin-bottom: 71px;
+    margin-bottom: 80px;
   }
 
   .contacts__map {
@@ -93,7 +89,6 @@
   }
 
   .contacts__write {
-    width: 27%;
     margin: 0;
   }
 }

@@ -48,7 +48,8 @@
 
   .contacts-list tbody {
     display: flex;
-    flex-wrap: wrap; //на случай добавления новых данных
+    flex-wrap: wrap;
+    //на случай добавления новых данных
   }
 
   .contacts-list__row {
@@ -67,6 +68,6 @@
   }
 
   .contacts-list__row {
-    margin-bottom: 4px;
+    margin-bottom: 30px;
   }
 }
