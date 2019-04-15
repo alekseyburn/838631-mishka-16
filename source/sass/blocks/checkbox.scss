@@ -52,3 +52,16 @@
 .checkbox__control:active + .checkbox__btn {
   border-color: $gray;
 }
+
+@media (min-width: $tablet-width) {
+  .checkbox__btn {
+    width: 54px;
+    height: 52px;
+    margin-right: 25px;
+  }
+
+  .checkbox__control:checked + .checkbox__btn::before {
+    width: 33px;
+    height: 22px;
+  }
+}
