@@ -28,6 +28,8 @@
 @media (min-width: $desktop-width) {
   .order {
     padding-top: 137px;
+    max-width: $desktop-width;
+    margin: 0 auto;
   }
 
   .order__text {

@@ -65,6 +65,8 @@
 @media (min-width: $desktop-width) {
   .contacts {
     position: relative;
+    max-width: $desktop-width;
+    margin: 0 auto;
 
     &::after {
       top: 134px;

@@ -137,6 +137,11 @@
 }
 
 @media (min-width: $desktop-width) {
+  .catalog {
+    max-width: $desktop-width;
+    margin: 0 auto;
+  }
+
   .catalog__list {
     flex-direction: row;
     flex-wrap: wrap;

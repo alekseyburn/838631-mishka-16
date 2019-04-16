@@ -170,6 +170,9 @@
 
 @media (min-width: $desktop-width) {
   .weekly-good {
+    max-width: $desktop-width;
+    margin: 0 auto;
+
     &::after {
       height: 23px;
     }

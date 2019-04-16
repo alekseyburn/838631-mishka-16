@@ -66,3 +66,11 @@
     }
   }
 }
+
+@media (min-width: $desktop-width) {
+  .page-footer__wrapper {
+    max-width: $desktop-width;
+    margin: 0 auto;
+    padding: 0 $tablet-indent;
+  }
+}
