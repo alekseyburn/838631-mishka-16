@@ -1,0 +1,36 @@
+.size__control {
+  appearance: none;
+}
+
+.size__switcher {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 82px;
+  height: 52px;
+
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 18px;
+
+  border: 2px solid $gray;
+  cursor: pointer;
+}
+
+.size__control:checked + .size__switcher {
+  border-color: $light-green;
+}
+
+.size__control:hover + .size__switcher {
+  border-color: $dark-gray;
+}
+
+.size__control:active + .size__switcher {
+  border-color: $light-green;
+}
+
+@media (min-width: $tablet-width) {
+  .size__switcher {
+    width: 112px;
+  }
+}

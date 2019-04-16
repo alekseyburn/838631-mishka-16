@@ -45,6 +45,7 @@
   border: none;
   transform: translateY(-50%);
   cursor: pointer;
+  background-image: url("../img/icon-menu-open.svg");
 
   &:hover,
   &:focus {
@@ -61,12 +62,8 @@
 }
 
 @media (max-width: $mobile-width-only) {
-  .page-header--menu-closed .site-list {
-    display: none;
-  }
-
-  .page-header--menu-closed .page-header__toggle {
-    background-image: url("../img/icon-menu-open.svg");
+  .page-header--nojs .site-list {
+    display: block;
   }
 
   .page-header--menu-opened .page-header__toggle {
@@ -76,11 +73,7 @@
     background-image: url("../img/icon-menu-close.svg");
   }
 
-  .page-header--nojs .page-header__toggle {
-    display: none;
-  }
-
-  .page-header--nojs .site-list {
+  .page-header--menu-opened .site-list {
     display: block;
   }
 }
