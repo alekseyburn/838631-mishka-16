@@ -272,6 +272,43 @@
     </div>
   </footer>
 
+  <section class="cart">
+    <h2 class="cart__title">Добавить в&nbsp;корзину</h2>
+    <p class="cart__text">Выберите размер:</p>
+    <form class="cart__form" action="https://echo.htmlacademy.ru" method="post">
+      <ul class="cart__list">
+        <li class="cart__item">
+          <label class="cart__toggle">
+            <input class="cart__control visually-hidden"
+                    type="radio"
+                    name="size"
+                    value="S"
+                    checked>
+            <span class="cart__btn">S</span>
+          </label>
+        </li>
+        <li class="cart__item">
+          <label class="cart__toggle">
+            <input class="cart__control visually-hidden"
+                    type="radio"
+                    name="size"
+                    value="M">
+            <span class="cart__btn">M</span>
+          </label>
+        </li>
+        <li class="cart__item">
+          <label class="cart__toggle">
+            <input class="cart__control visually-hidden"
+                    type="radio"
+                    name="size"
+                    value="L">
+            <span class="cart__btn">L</span>
+          </label>
+        </li>
+      </ul>
+      <button class="cart__add button" type="submit">Добавить</button>
+    </form>
+  </section>
   <script src="js/script.js"></script>
 
 </body>
