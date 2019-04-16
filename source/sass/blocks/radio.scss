@@ -23,11 +23,11 @@
   justify-content: center;
   align-items: center;
   width: 40px;
-  min-width: 40px;
+  // min-width: 40px;
   height: 40px;
   margin-right: 20px;
 
-  border: 2px solid  $black;
+  border: 2px solid $black;
   border-radius: 50%;
 }
 
@@ -51,4 +51,17 @@
 
 .radio__control:active + .radio__btn {
   border-color: $gray;
+}
+
+@media (min-width: $tablet-width) {
+  .radio__btn {
+    width: 52px;
+    height: 52px;
+    margin-right: 28px;
+  }
+
+  .radio__control:checked + .radio__btn::before {
+    width: 22px;
+    height: 22px;
+  }
 }

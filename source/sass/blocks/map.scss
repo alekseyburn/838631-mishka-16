@@ -20,3 +20,9 @@
 
   display: block;
 }
+
+@media (min-width: $desktop-width) {
+  .map {
+    position: absolute;
+  }
+}

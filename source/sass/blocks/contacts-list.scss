@@ -1,21 +1,29 @@
+.contacts-list {
+  border-collapse: collapse;
+}
+
+.contacts-list__row {
+  display: block;
+  margin-bottom: 30px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
 .contacts-list__caption {
-  width: 30%;
   padding: 0;
-  padding-top: 25px;
+  padding-right: 30px;
 
   vertical-align: top;
 }
 
 .contacts-list__value {
-  width: 70%;
   padding: 0;
-  padding-top: 26px;
-
-  vertical-align: top;
 }
 
 .contacts-list__email {
-  padding-bottom: 3px;
+  padding-bottom: 4px;
 
   color: $black;
 
@@ -30,5 +38,35 @@
     &:active {
       opacity: 0.3;
     }
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .contacts-list {
+    font-size: 17px;
+  }
+
+  .contacts-list tbody {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .contacts-list__row {
+    display: flex;
+    width: 50%;
+  }
+
+  .contacts-list__caption {
+    padding-right: 25px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .contacts-list tbody {
+    display: table;
+  }
+
+  .contacts-list__row {
+    margin-bottom: 30px;
   }
 }

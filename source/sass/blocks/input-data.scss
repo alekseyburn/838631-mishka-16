@@ -8,7 +8,7 @@
 .input-data__field {
   width: 100%;
   margin-top: 20px;
-  padding-bottom: 12px;
+  padding-bottom: 13px;
 
   font-size: 17px;
   line-height: 18px;
@@ -19,6 +19,7 @@
   border-bottom: 2px solid $black;
 
   &--phone {
+    margin-top: -5px;
     padding-right: 40px;
     padding-bottom: 12px;
 
@@ -27,8 +28,9 @@
   }
 
   &--email {
+    margin-top: -5px;
     padding-right: 40px;
-    padding-bottom: 18px;
+    padding-bottom: 15px;
   }
 
   &::placeholder {
@@ -38,6 +40,7 @@
   &:hover,
   &:focus {
     border-color: $light-green;
+    outline: none;
   }
 
   &:hover + .input-data__icon,
@@ -48,9 +51,57 @@
 
 .input-data__icon {
   position: absolute;
-  top: 19px;
+  top: -5px;
   right: 5px;
   z-index: -1;
 
   fill: rgba($black, 0.2);
+}
+
+@media (min-width: $tablet-width) {
+  .input-data {
+    display: flex;
+    align-items: center;
+  }
+
+  .input-data__field {
+    margin-top: 0;
+    margin-left: 25px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 15px;
+
+    font-size: 19px;
+    line-height: 20px;
+
+    &--phone,
+    &--email {
+      margin-left: 30px;
+      padding-top: 10px;
+      padding-left: 20px;
+    }
+  }
+
+  .input-data__icon {
+    top: 10px;
+    right: 22px;
+    z-index: 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .input-data {
+    width: 700px;
+  }
+
+  .input-data__field {
+    &--phone,
+    &--email {
+      margin-left: 0;
+    }
+  }
+
+  .input-data__icon {
+    right: 0;
+  }
 }

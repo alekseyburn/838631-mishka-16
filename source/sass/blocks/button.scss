@@ -2,7 +2,6 @@
   display: block;
   width: 100%;
   padding: 14px 0;
-  cursor: pointer;
 
   font-weight: bold;
   font-size: 17px;
@@ -13,6 +12,7 @@
 
   background-color: transparent;
   border: 2px solid $main-text;
+  cursor: pointer;
 
   &:hover,
   &:focus {

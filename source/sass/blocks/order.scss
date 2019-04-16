@@ -1,12 +1,37 @@
 .order {
-  padding-top: 22px;
-  padding-bottom: 54px;
+  padding-top: 20px;
+  padding-bottom: 55px;
 }
 
 .order__text {
   margin: 0;
-  margin-bottom: 23px;
+  margin-bottom: 25px;
 
   font-size: 13px;
   line-height: 24px;
+}
+
+@media (min-width: $tablet-width) {
+  .order {
+    padding-top: 60px;
+    padding-bottom: $tablet-indent;
+  }
+
+  .order__text {
+    margin-bottom: 8px;
+
+    font-size: 17px;
+    line-height: 30px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .order {
+    padding-top: 137px;
+  }
+
+  .order__text {
+    padding-right: 175px;
+    padding-left: 175px;
+  }
 }
