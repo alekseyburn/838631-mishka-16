@@ -119,11 +119,18 @@
   }
 
   .form__list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     width: 75%;
 
     &--checkbox {
       display: flex;
+      flex-direction: row;
       flex-wrap: wrap;
+      width: 80%;
+      margin-right: -15px;
+      margin-left: -15px;
     }
   }
 
@@ -133,12 +140,10 @@
 
   .form__field {
     &--checkbox {
-      width: 45%;
+      width: 50%;
       margin-bottom: 34px;
-
-      &:nth-child(2n + 1) {
-        margin-right: 38px;
-      }
+      padding-right: 15px;
+      padding-left: 15px;
 
       &:nth-last-child(-n + 2) {
         margin-bottom: 0;
