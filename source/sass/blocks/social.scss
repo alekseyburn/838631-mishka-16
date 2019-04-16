@@ -1,4 +1,8 @@
 .social {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
   background-color: $light-gray;
 }
 
@@ -7,12 +11,13 @@
 
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  width: 141px;
-  margin: 0 auto;
+  align-items: baseline;
+  width: 140px;
 }
 
 .social__icon {
+  display: block;
+
   &:hover,
   &:focus {
     fill: $medium-green-hover;
@@ -21,6 +26,4 @@
   &:active {
     opacity: 0.3;
   }
-
-  //заметил, что фокус не работает при хождении по сайту с клавиатуры. Пытался сделать через social__link, но почему-то тоже отказывается работать.
 }

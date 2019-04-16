@@ -1,6 +1,9 @@
 .weekly-good {
   position: relative;
 
+  display: flex;
+  flex-direction: column;
+
   background-color: $white;
 
   &::after {
@@ -14,9 +17,14 @@
 
     background-image: url("../img/bg-zigzag-line.svg");
     background-repeat: repeat-x;
-    background-position: bottom 0;
+    background-position: bottom;
     background-size: contain;
+    opacity: 0.1;
   }
+}
+
+.weekly-good__title-wrapper {
+  order: 1;
 }
 
 .weekly-good__title {
@@ -35,6 +43,19 @@
   text-transform: uppercase;
 }
 
+.weekly-good__img {
+  order: 3;
+  margin-bottom: 20px;
+}
+
+.weekly-good__info-wrapper {
+  order: 2;
+
+  &--order {
+    order: 4;
+  }
+}
+
 .weekly-good__description {
   margin: 0;
   margin-bottom: 18px;
@@ -44,7 +65,7 @@
 
 .weekly-good__list {
   width: 100%;
-  margin-bottom: $indent;
+  margin-bottom: $mobile-indent;
 
   border-collapse: collapse;
   line-height: 20px;
@@ -58,19 +79,141 @@
   display: flex;
   align-items: center;
   min-height: 39px;
+  padding: 0;
   padding-right: 12px;
 }
 
-.weekly-good__img {
-  margin-bottom: 15px;
+.weekly-good__value {
+  padding: 0;
 }
 
 .weekly-good__price {
   margin: 0;
-  margin-bottom: 24px;
+  margin-bottom: 27px;
 
   font-weight: bold;
   font-size: 17px;
   line-height: 24px;
   text-align: center;
+}
+
+@media (min-width: $tablet-width) {
+  .weekly-good {
+    display: block;
+
+    &::after {
+      height: 15px;
+    }
+  }
+
+  .weekly-good__title-wrapper {
+    display: flex;
+    margin-bottom: 47px;
+    align-items: center;
+  }
+
+  .weekly-good__title {
+    flex-grow: 1;
+    margin-bottom: 0;
+  }
+
+  .weekly-good__subtitle {
+    width: 80px;
+    margin-bottom: 0;
+    margin-right: 23px;
+
+    line-height: 17px;
+    text-align: center;
+  }
+
+  .weekly-good__info-wrapper {
+    width: 50%;
+    min-height: 245px;
+    padding-right: $tablet-indent;
+    margin-bottom: 55px;
+
+    &:last-of-type {
+      min-height: auto;
+      margin-bottom: 0;
+    }
+  }
+
+  .weekly-good__img {
+    position: relative;
+    top: 9px;
+
+    float: right;
+    width: 333px;
+  }
+
+  .weekly-good__description {
+    margin-bottom: 35px;
+
+    font-size: 17px;
+    line-height: 30px;
+  }
+
+  .weekly-good__list {
+    margin-bottom: 0;
+  }
+
+  .weekly-good__caption {
+    padding-right: 0;
+  }
+
+  .weekly-good__price {
+    margin-bottom: 35px;
+
+    font-size: 20px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .weekly-good {
+    &::after {
+      height: 23px;
+    }
+  }
+
+  .weekly-good__title-wrapper {
+    margin-bottom: 50px;
+  }
+
+  .weekly-good__title {
+    z-index: 2;
+
+    order: 2;
+  }
+
+  .weekly-good__subtitle {
+    margin-right: 50px;
+    margin-left: 40px;
+  }
+
+  .weekly-good__info-wrapper {
+    width: 340px;
+    margin-bottom: 110px;
+    margin-left: 175px;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  .weekly-good__description {
+    margin-bottom: $tablet-indent;
+  }
+
+  .weekly-good__img {
+    position: absolute;
+    top: 70px;
+    right: 50px;
+    z-index: 1;
+
+    width: 525px;
+  }
+
+  .weekly-good__price {
+    margin-bottom: 32px;
+  }
 }

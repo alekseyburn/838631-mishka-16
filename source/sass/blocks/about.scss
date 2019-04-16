@@ -4,15 +4,26 @@
 
 .about__title {
   margin: 0;
-  margin-bottom: $indent;
+  margin-bottom: $mobile-indent;
 }
 
 .about__list {
   @include reset-list;
 }
 
+.about__item {
+  margin-bottom: 25px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
 .about__icon {
-  margin-bottom: $indent / 3;
+  display: block;
+  height: 37px;
+  margin-bottom: 21px;
+  margin-left: 5px;
   overflow: hidden;
 
   fill: $light-green;
@@ -20,10 +31,62 @@
 
 .about__text {
   margin: 0;
-  margin-bottom: $indent;
 
   font-weight: bold;
   font-size: 17px;
   line-height: 20px;
   color: $black;
+}
+
+@media (min-width: $tablet-width) {
+  .about__title {
+    margin-bottom: $tablet-indent;
+  }
+
+  .about__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .about__item {
+    width: 50%;
+    margin-bottom: 55px;
+
+    &--ecology {
+      order: 1;
+    }
+
+    &--knitting {
+      order: 2;
+    }
+
+    &--price {
+      order: 3;
+    }
+
+    &--support {
+      order: 4;
+    }
+
+    &--likes {
+      order: 5;
+      margin-bottom: 0;
+    }
+
+    &--gift {
+      order: 6;
+      margin-bottom: 0;
+    }
+  }
+
+  .about__icon {
+    margin-bottom: 18px;
+    margin-left: 0;
+  }
+
+  .about__text {
+    font-size: 20px;
+    line-height: 22px;
+  }
 }

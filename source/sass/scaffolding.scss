@@ -18,7 +18,9 @@ img {
 }
 
 body {
-  margin: 0;
+  min-width: $mobile-width;
+  max-width: $desktop-width;
+  margin: 0 auto;
 
   font-weight: normal;
   font-size: 15px;

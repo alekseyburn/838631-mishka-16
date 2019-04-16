@@ -5,26 +5,32 @@
 }
 
 .site-list__item {
-  display: flex; //fix вертикального выравнивания в ie11
+  display: flex;
+
+  font-size: 17px;
+  line-height: 24px;
 }
 
 .site-list__link {
   position: relative;
 
   display: flex;
+  justify-content: flex-start;
   align-items: center;
-  width: 100%; //fix вертикального выравнивания в ie11
+  width: 100%;
   min-height: 79px;
-  padding-right: $indent;
-  padding-left: $indent + 46px;
+  padding-right: $mobile-indent;
+  padding-left: $mobile-indent + 46px;
 
   font-weight: bold;
-  font-size: 17px;
-  line-height: 24px;
   color: $black;
 
-  background-color: $white;
   border-bottom: 1px solid $gray;
+
+  &--new,
+  &--sale {
+    display: none;
+  }
 
   &:hover,
   &:focus {
@@ -48,7 +54,99 @@
 
 .site-list__svg {
   position: absolute;
+  top: 50%;
   left: 30px;
 
+  overflow: hidden;
+
+  transform: translateY(-50%);
   opacity: 0.2;
+}
+
+@media (min-width: $tablet-width) {
+  .site-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
+  .site-list__link {
+    z-index: 1;
+
+    width: auto;
+    min-height: 88px;
+    padding-right: 0;
+    padding-left: 82px;
+
+    border-bottom: none;
+    border-left: 1px solid $gray;
+
+    &--search {
+      font-size: 0;
+    }
+  }
+}
+
+@media (min-width: $tablet-width) and (max-width: $tablet-width-only) {
+  .site-list__link {
+    &--catalog,
+    &--order {
+      position: absolute;
+      bottom: -42px;
+      left: $tablet-indent;
+
+      min-height: auto;
+      padding-left: 0;
+
+      font-size: 15px;
+
+      border-left: none;
+    }
+
+    &--order {
+      left: 216px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .site-list {
+    justify-content: flex-start;
+  }
+
+  .site-list__item:nth-child(3) {
+    margin-left: auto;
+  }
+
+  .site-list__link {
+    &--catalog {
+      margin-right: 35px;
+      padding-left: 0;
+
+      border-left: none;
+    }
+
+    &--order {
+      padding-left: 35px;
+    }
+
+    &--new,
+    &--sale {
+      position: absolute;
+      bottom: -42px;
+      left: $tablet-indent;
+
+      display: block;
+      min-height: auto;
+      padding-left: 0;
+
+      font-size: 15px;
+
+      border-left: none;
+    }
+
+    &--sale {
+      left: 270px;
+    }
+  }
 }
