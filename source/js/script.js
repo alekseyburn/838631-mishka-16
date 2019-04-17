@@ -1,34 +1,52 @@
-  var navMain = document.querySelector(".page-header");
-  var navToggle = document.querySelector(".page-header__toggle");
+  "use strict";
 
-  navMain.classList.remove("page-header--nojs");
+  (function () {
+    let navMain = document.querySelector(".page-header");
+    let navToggle = document.querySelector(".page-header__toggle");
+
+  navMain.classList.remove("page-header--nojs"); //удаляем класс nojs, если js доступен
 
   navToggle.addEventListener("click", function() {
-    navMain.classList.toggle("page-header--menu-opened");
+    navMain.classList.toggle("page-header--menu-opened"); //открываем/закрываем меню при нажатии на бургер/крестик
   });
 
-  var link = document.querySelector(".weekly-good__button");
-  var popup = document.querySelector(".cart");
-  var overlay = document.querySelector(".overlay");
+  let link = document.querySelector(".weekly-good__button");
+  let popup = document.querySelector(".cart");
+  let overlay = document.querySelector(".overlay");
 
-  link.addEventListener("click", function (evt) {
-  evt.preventDefault();
-  popup.classList.add("cart--show");
-  overlay.classList.add("overlay--show");
-});
+  let modalShow = function () { //функция открытия модального окна и оверлея
+    popup.classList.add("cart--show");
+    overlay.classList.add("overlay--show");
+  };
 
-  overlay.addEventListener("click", function (evt) {
-  evt.preventDefault();
-  popup.classList.remove("cart--show");
-  overlay.classList.remove("overlay--show");
-});
+  let modalClose = function () { //функция закрытия модального окна и оверлея
+    popup.classList.remove("cart--show");
+    overlay.classList.remove("overlay--show");
+  };
 
-  window.addEventListener("keydown", function (evt) {
-  if (evt.keyCode === 27) {
-    evt.preventDefault();
-    if (popup.classList.contains("cart--show")) {
-      popup.classList.remove("cart--show");
-      overlay.classList.remove("overlay--show");
+  link.addEventListener("click", function (event) { //открываем модалку при нажатии на кнопку "заказать"
+    event.preventDefault();
+    modalShow();
+  });
+
+  overlay.addEventListener("click", function (event) { //закрываем модалку при нажатии на оверлей
+    event.preventDefault();
+    modalClose();
+  });
+
+  document.addEventListener("keyup", function (event) { //закрываем модалку при нажатии на esc
+    if (event.defaultPrevented) {
+      return;
     }
-  }
-})
+
+    let key = event.key || event.keyCode;
+
+    if (key === 'Escape' || key === 'Esc' || key === 27) {} {
+      event.preventDefault();
+      if (popup.classList.contains("cart--show")) {
+        modalClose();
+      }
+    }
+  });
+
+})();
