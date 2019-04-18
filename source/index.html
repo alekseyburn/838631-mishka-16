@@ -9,12 +9,12 @@
 </head>
 <body>
 
-  <header class="page-header">
+  <header class="page-header page-header--nojs">
     <div class="page-header__wrapper">
       <a class="page-header__logo" href="index.html">
         <img class="page-header__logo-image" src="img/logo-mobile.svg" width="86" height="35" alt="магазин «Мишка»">
       </a>
-      <button class="page-header__toggle" type="button" aria-label="Открыть меню"></button>
+      <button class="page-header__toggle page-header__toggle" type="button" aria-label="Открыть меню"></button>
     </div>
     <nav class="main-nav">
       <div class="main-nav__wrapper">
@@ -271,5 +271,38 @@
       </div>
     </div>
   </footer>
+
+  <section class="cart">
+    <h2 class="cart__title">Добавить в&nbsp;корзину</h2>
+    <p class="cart__text">Выберите размер:</p>
+    <form class="cart__form" action="https://echo.htmlacademy.ru" method="post">
+      <ul class="cart__list">
+        <li class="cart__item">
+          <label class="cart__toggle size">
+            <input class="size__control visually-hidden" type="radio" name="size" value="S" checked>
+            <span class="size__switcher">S</span>
+          </label>
+        </li>
+        <li class="cart__item">
+          <label class="cart__toggle size">
+            <input class="size__control visually-hidden" type="radio" name="size" value="M">
+            <span class="size__switcher">M</span>
+          </label>
+        </li>
+        <li class="cart__item">
+          <label class="cart__toggle size">
+            <input class="size__control visually-hidden" type="radio" name="size" value="L">
+            <span class="size__switcher">L</span>
+          </label>
+        </li>
+      </ul>
+      <button class="cart__add button" type="submit">Добавить</button>
+    </form>
+  </section>
+
+  <div class="overlay"></div>
+
+  <script src="js/script.js"></script>
+
 </body>
 </html>

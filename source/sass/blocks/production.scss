@@ -167,6 +167,11 @@
 }
 
 @media (min-width: $desktop-width) {
+  .production {
+    max-width: $desktop-width;
+    margin: 0 auto;
+  }
+
   .production__wrapper {
     display: block;
     min-height: 456px;

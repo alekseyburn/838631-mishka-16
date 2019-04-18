@@ -28,10 +28,15 @@
 @media (min-width: $desktop-width) {
   .order {
     padding-top: 137px;
+    padding-right: 0;
+    padding-left: 0;
   }
 
   .order__text {
-    padding-right: 175px;
-    padding-left: 175px;
+    max-width: $desktop-width;
+    margin: 0 auto;
+    margin-bottom: 6px;
+    padding-right: 225px;
+    padding-left: 225px;
   }
 }

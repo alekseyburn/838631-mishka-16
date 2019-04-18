@@ -47,7 +47,8 @@
   line-height: 24px;
   color: $white;
 
-  &::before { //fix ie11 min-height
+  &::before {
+    //fix ie11 min-height
     content: "";
 
     min-height: inherit;
@@ -178,11 +179,21 @@
 
 @media (min-width: $desktop-width) {
   .categories__lead {
+    max-width: $desktop-width;
+    margin: 0 auto;
+
     font-size: 53px;
     line-height: 57px;
   }
 
   .categories__list {
+    right: 50%;
+    //если выравнивать через left, то в ie11 все ломается, а если по right, то нет. Не понял почему.
+
+    max-width: $desktop-width;
+
+    transform: translateX(50%);
+
     &::after {
       bottom: -15px;
 
