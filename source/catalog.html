@@ -6,7 +6,14 @@
   <meta name="format-detection" content="telephone=no">
   <title>Магазин «Мишка» - Каталог</title>
   <link rel="stylesheet" href="css/style.css">
-  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/picturefill/3.0.3/picturefill.min.js"></script>
+  <script type="text/javascript">
+    if(/Trident.*rv:/.test(navigator.userAgent)) {
+      document.write('<script src="//cdnjs.cloudflare.com/ajax/libs/picturefill/3.0.3/picturefill.min.js"><\/script>');
+      if (typeof picturefill == 'undefined') {
+        document.write(unescape("%3Cscript src='/js/picturefill.min.js' type='text/javascript'%3E%3C/script%3E"));
+      }
+    }
+  </script>
 </head>
 <body>
 
