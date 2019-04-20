@@ -10,6 +10,11 @@
   background-repeat: no-repeat;
   background-position: center top;
   background-size: cover;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/hero-mobile@2x.jpg");
+    //в лекции прописывается bgsize для данного варианта. Он действительно нужен тут? По мне здесь cover отлично вписывается.
+  }
 }
 
 .categories__lead {
@@ -123,6 +128,12 @@
 @media (min-width: $tablet-width) {
   .categories__wrapper {
     min-height: 746px;
+
+    background-image: url("../img/hero-tablet@1x.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/hero-tablet@2x.jpg");
+    }
   }
 
   .categories__lead {
@@ -178,6 +189,14 @@
 }
 
 @media (min-width: $desktop-width) {
+  .categories__wrapper {
+    background-image: url("../img/hero-tablet@1x.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/hero-tablet@2x.jpg");
+    }
+  }
+
   .categories__lead {
     max-width: $desktop-width;
     margin: 0 auto;
@@ -188,7 +207,6 @@
 
   .categories__list {
     right: 50%;
-    //если выравнивать через left, то в ie11 все ломается, а если по right, то нет. Не понял почему.
 
     max-width: $desktop-width;
 

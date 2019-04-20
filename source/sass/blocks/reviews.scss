@@ -73,8 +73,12 @@
 
 @media (min-width: $tablet-width) {
   .reviews {
-    background-image: url("../../img/review@1x.jpg");
+    background-image: url("../img/review@1x.jpg");
     background-repeat: no-repeat;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/review@2x.jpg");
+    }
 
     &::after {
       height: 15px;
