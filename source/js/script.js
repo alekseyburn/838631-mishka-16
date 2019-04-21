@@ -97,15 +97,15 @@
       slides[slideIndex - 1].style.display = "block";
     }
     //назначение переключателей на кнопки
-    let slideLeft = document.querySelector(".reviews__change-btn--prev");
-    let slideRight = document.querySelector(".reviews__change-btn--next");
+    let prevSlideBtn = document.querySelector(".reviews__change-btn--prev");
+    let nextSlideBtn = document.querySelector(".reviews__change-btn--next");
 
-    slideLeft.addEventListener("click", function (event) {
+    prevSlideBtn.addEventListener("click", function (event) {
       event.preventDefault();
       prevSlide();
     });
 
-    slideRight.addEventListener("click", function (event) {
+    nextSlideBtn.addEventListener("click", function (event) {
       event.preventDefault();
       nextSlide();
     });
