@@ -15,27 +15,25 @@
   let link = document.querySelector(".weekly-good__button");
   let popup = document.querySelector(".cart");
   let overlay = document.querySelector(".overlay");
+  let lastFocus;
 
   if (!link) {
     return;
   } else {
-    let focusableSelectors = 'a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), iframe, object, embed, *[tabindex], *[contenteditable]';
     //функция открытия модального окна и оверлея
     let modalShow = function () {
       popup.classList.add("cart--show");
       overlay.classList.add("overlay--show");
-      popup.querySelector(focusableSelectors).focus();
-      let focusableElements = document.querySelectorAll(focusableSelectors);
-      focusableElements.forEach(el => el.setAttribute('tabindex', '-1'));
+      lastFocus = document.activeElement;
+      popup.setAttribute('tabindex', '0');
+      popup.focus();
     };
 
     //функция закрытия модального окна и оверлея
     let modalClose = function () {
       popup.classList.remove("cart--show");
       overlay.classList.remove("overlay--show");
-      let focusableElements = document.querySelectorAll(focusableSelectors);
-      focusableElements.forEach(el => el.removeAttribute('tabindex'));
-      link.focus();
+      lastFocus.focus();
     };
 
     //открываем модалку при нажатии на кнопку "заказать"
