@@ -81,14 +81,14 @@
       let slides = document.querySelectorAll(".reviews__item");
 
       if (currentSlide > slides.length) {
-        slideIndex = 1
+        slideIndex = 1;
       }
 
       if (currentSlide < 1) {
-        slideIndex = slides.length
+        slideIndex = slides.length;
       }
 
-      slides.forEach(function(slideIndex, i) {
+      Array.prototype.forEach.call(slides, function(slideIndex, i) {
         slides[i].style.display = "none";
       });
 
