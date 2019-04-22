@@ -40,10 +40,14 @@
 
 .cart__list {
   @include reset-list;
+
+  position: relative;
+
   display: flex;
   justify-content: space-between;
   margin-bottom: $mobile-indent;
 }
+
 
 .cart__add {
   color: $white;

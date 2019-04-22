@@ -25,6 +25,17 @@
   border-color: $dark-gray;
 }
 
+.size__control:focus + .size__switcher::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: -20px;
+  right: -20px;
+  top: -10px;
+  bottom: -10px;
+  outline: 2px solid rgba(3, 102, 214, 0.3);
+}
+
 .size__control:active + .size__switcher {
   border-color: $light-green;
 }
