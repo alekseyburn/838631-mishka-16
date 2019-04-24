@@ -13,7 +13,6 @@
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: url("../img/hero-mobile@2x.jpg");
-    //в лекции прописывается bgsize для данного варианта. Он действительно нужен тут? По мне здесь cover отлично вписывается.
   }
 }
 
