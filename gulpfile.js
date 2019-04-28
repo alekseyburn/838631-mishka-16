@@ -16,6 +16,7 @@ var webp = require("gulp-webp");
 var svgstore = require("gulp-svgstore");
 var uglyfly = require("gulp-uglyfly");
 var babel = require("gulp-babel");
+var iife = require("gulp-iife");
 
 gulp.task("css", function () {
   return gulp.src("source/sass/style.scss")
@@ -51,9 +52,12 @@ gulp.task("images", function () {
 
 gulp.task("js", function () {
   return gulp.src("source/js/**/*.js")
-  .pipe(babel({ presets: ["env"] }))
+  .pipe(sourcemap.init())
+  .pipe(babel({ presets: ["@babel/preset-env"] }))
   .pipe(uglyfly())
+  .pipe(iife({ useStrict: false}))
   .pipe(rename({extname: ".min.js"}))
+  .pipe(sourcemap.write("."))
   .pipe(gulp.dest("build/js"));
 });
 
