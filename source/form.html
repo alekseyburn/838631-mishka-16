@@ -6,6 +6,8 @@
   <meta name="format-detection" content="telephone=no">
   <title>Магазин «Мишка» - Вязание на заказ</title>
   <link rel="stylesheet" href="css/style.min.css">
+  <link rel="preload" href="fonts/opensans.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/opensansbold.woff2" as="font" crossorigin="anonymous">
   <script src="js/iepolyfills.min.js"></script>
 </head>
 <body>
@@ -62,7 +64,7 @@
       <form class="form" action="https://echo.htmlacademy.ru" method="post">
         <fieldset>
           <div class="form__item">
-            <legend class="form__caption">Тип</legend>
+            <div class="form__caption">Тип</div>
             <ul class="form__list">
               <li class="form__field">
                 <label class="form__label radio">
@@ -84,7 +86,7 @@
         <fieldset>
           <div class="form__item form__item--checkbox">
             <div class="form__wrapper">
-              <legend class="form__caption">Цвет</legend>
+              <div class="form__caption">Цвет</div>
               <ul class="form__list form__list--checkbox">
                 <li class="form__field form__field--checkbox">
                   <label class="form__label checkbox">
@@ -134,7 +136,7 @@
         </fieldset>
         <fieldset>
           <div class="form__item form__item--initials">
-            <legend class="form__caption">ФИО</legend>
+            <div class="form__caption">ФИО</div>
             <ul class="form__list">
               <li class="form__field">
                 <label class="form__label input-data">
@@ -157,36 +159,30 @@
             </ul>
           </div>
         </fieldset>
-        <fieldset>
-          <div class="form__item form__item--phone">
-            <div class="form__wrapper form__wrapper--contacts">
-              <legend class="form__caption">Тел</legend>
-              <label class="form__label input-data">
-                <input class="input-data__field input-data__field--phone" type="tel" name="phone" pattern="+7\s[0-9]{3}\s[0-9]{3}\s[0-9]{2}\s[0-9]{2}" placeholder="+7 XXX XXX XX XX*" aria-label="Телефон" required>
-                <svg class="input-data__icon" width="24.829px" height="24.333px"><use xlink:href="img/sprite.svg#icon-phone"></use></svg>
-              </label>
-            </div>
-          </div>
-        </fieldset>
-        <fieldset>
-          <div class="form__item form__item--email">
-            <div class="form__wrapper form__wrapper--contacts">
-              <legend class="form__caption">E-mail</legend>
-              <label class="form__label input-data">
-                <input class="input-data__field input-data__field--email" type="email" name="email" placeholder="Ваш Email*" aria-label="Email" required>
-                <svg class="input-data__icon" width="32px" height="32px"><use xlink:href="img/sprite.svg#icon-email"></use></svg>
-              </label>
-            </div>
-          </div>
-        </fieldset>
-        <fieldset>
-          <div class="form__item form__item--textarea">
-            <legend class="form__caption">Доп</legend>
-            <label class="form__label textarea">
-              <textarea class="textarea__field" name="textarea" rows="5" placeholder="Опишите все ваши пожелания к заказу" aria-label="Пожелания"></textarea>
+        <div class="form__item form__item--phone">
+          <div class="form__wrapper form__wrapper--contacts">
+            <div class="form__caption">Тел</div>
+            <label class="form__label input-data">
+              <input class="input-data__field input-data__field--phone" type="tel" name="phone" pattern="\+7\s[0-9]{3}\s[0-9]{3}\s[0-9]{2}\s[0-9]{2}" placeholder="+7 XXX XXX XX XX*" aria-label="Телефон" required>
+              <svg class="input-data__icon" width="24.829px" height="24.333px"><use xlink:href="img/sprite.svg#icon-phone"></use></svg>
             </label>
           </div>
-        </fieldset>
+        </div>
+        <div class="form__item form__item--email">
+          <div class="form__wrapper form__wrapper--contacts">
+            <div class="form__caption">E-mail</div>
+            <label class="form__label input-data">
+              <input class="input-data__field input-data__field--email" type="email" name="email" placeholder="Ваш Email*" aria-label="Email" required>
+              <svg class="input-data__icon" width="32px" height="32px"><use xlink:href="img/sprite.svg#icon-mail"></use></svg>
+            </label>
+          </div>
+        </div>
+        <div class="form__item form__item--textarea">
+          <div class="form__caption">Доп</div>
+          <label class="form__label textarea">
+            <textarea class="textarea__field" name="textarea" rows="5" placeholder="Опишите все ваши пожелания к заказу" aria-label="Пожелания"></textarea>
+          </label>
+        </div>
         <div class="form__wrapper form__wrapper--order">
           <small class="form__legend">*Поля обязательны для заполнения</small>
           <button class="form__send button" type="submit">Отправить заказ</button>

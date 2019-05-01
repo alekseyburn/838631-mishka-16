@@ -41,6 +41,14 @@
   &:focus {
     border-color: $light-green;
     outline: none;
+
+    &:required:invalid {
+      border-color: red;
+
+      & + .input-data__icon {
+        fill: red;
+      }
+    }
   }
 
   &:hover + .input-data__icon,

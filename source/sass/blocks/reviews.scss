@@ -157,6 +157,8 @@
 
     &::after {
       height: 23px;
+      left: $tablet-indent;
+      right: $tablet-indent;
     }
   }
 

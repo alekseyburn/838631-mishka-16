@@ -6,6 +6,15 @@
 
 .page-footer__logo {
   display: none;
+
+  &:hover,
+  &:focus {
+    fill: $medium-green-hover;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .page-footer__logo-image {

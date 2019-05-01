@@ -6,6 +6,8 @@
   <meta name="format-detection" content="telephone=no">
   <title>Магазин «Мишка»</title>
   <link rel="stylesheet" href="css/style.min.css">
+  <link rel="preload" href="fonts/opensans.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/opensansbold.woff2" as="font" crossorigin="anonymous">
   <script src="js/iepolyfills.min.js"></script>
 </head>
 <body>
@@ -105,7 +107,7 @@
       </div>
       <div class="weekly-good__info-wrapper weekly-good__info-wrapper--order">
         <p class="weekly-good__price">Цена: 990 руб.</p>
-        <a class="weekly-good__button button" href="order.html" tabindex="7">Заказать</a>
+        <a class="weekly-good__button button button--modal" href="order.html" tabindex="7">Заказать</a>
       </div>
     </section>
 
@@ -125,7 +127,7 @@
           <p class="about__text">Увеличивает лайки на&nbsp;фотографиях</p>
         </li>
         <li class="about__item about__item--knitting">
-          <svg class="about__icon"width="34.373px" height="34.373px"><use xlink:href="img/sprite.svg#icon-feature-ball"></use></svg>
+          <svg class="about__icon" width="34.373px" height="34.373px"><use xlink:href="img/sprite.svg#icon-feature-ball"></use></svg>
           <p class="about__text">Связано вручную с любовью&nbsp;и&nbsp;умилением</p>
         </li>
         <li class="about__item about__item--support">
@@ -186,7 +188,7 @@
         </tr>
       </table>
       <div class="contacts__map map">
-        <iframe class="map__widget" src="https://yandex.ru/map-widget/v1/-/CCu264MZ" width="320" height="457" allowfullscreen="true" Frameborder="0"></iframe>
+        <iframe class="map__widget" src="https://yandex.ru/map-widget/v1/-/CCu264MZ" width="320" height="457" allowfullscreen></iframe>
         <picture>
           <source type="image/webp" media="(min-width: 1150px)" srcset="img/map-desktop@1x.webp 1x, img/map-desktop@2x.webp 2x">
           <source type="image/webp" media="(min-width: 768px)" srcset="img/map-tablet@1x.webp 1x, img/map-tablet@2x.webp 2x">

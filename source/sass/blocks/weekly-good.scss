@@ -179,6 +179,8 @@
 
     &::after {
       height: 23px;
+      left: $tablet-indent;
+      right: $tablet-indent;
     }
   }
 
@@ -208,7 +210,7 @@
   }
 
   .weekly-good__description {
-    margin-bottom: $tablet-indent;
+    margin-bottom: 48px;
   }
 
   .weekly-good__img {

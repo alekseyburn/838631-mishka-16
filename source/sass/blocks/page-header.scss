@@ -41,11 +41,11 @@
   height: 14px;
 
   background-color: transparent;
+  background-image: url("../img/icon-menu-open.svg");
   background-repeat: no-repeat;
   border: none;
   transform: translateY(-50%);
   cursor: pointer;
-  background-image: url("../img/icon-menu-open.svg");
 
   &:hover,
   &:focus {
@@ -57,6 +57,7 @@
   }
 }
 
+
 .page-header__delivery {
   display: none;
 }
@@ -64,6 +65,10 @@
 @media (max-width: $mobile-width-only) {
   .page-header--nojs .site-list {
     display: block;
+  }
+
+  .page-header--nojs .page-header__toggle {
+    display: none;
   }
 
   .page-header--menu-opened .page-header__toggle {

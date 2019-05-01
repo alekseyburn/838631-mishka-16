@@ -1,3 +1,8 @@
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
 .form fieldset {
   margin: 0;
   padding: 0;
@@ -182,18 +187,28 @@
   .form__item {
     max-width: $desktop-width;
     margin: 0 auto;
+    padding-top: 51px;
     padding-left: 114px;
 
     &--checkbox,
     &--phone,
     &--email {
       max-width: 100%;
+      margin: 0;
       padding-right: 0;
       padding-left: 0;
     }
 
+    &--email {
+      padding-top: 20px;
+      padding-bottom: 41px;
+    }
+
     &--textarea {
-      padding-bottom: 42px;
+      width: $desktop-width;
+      margin: 0 auto;
+      padding-right: 225px;
+      padding-bottom: 45px;
     }
   }
 

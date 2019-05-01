@@ -22,6 +22,11 @@
   &--production {
     padding-bottom: 60px;
   }
+
+  &--order {
+    padding-top: 20px;
+    padding-bottom: 55px;
+  }
 }
 
 .section__title {
@@ -58,6 +63,11 @@
     &--production {
       padding-top: 50px;
       padding-bottom: 65px;
+    }
+
+    &--order {
+      padding-top: 60px;
+      padding-bottom: $tablet-indent;
     }
   }
 
@@ -101,6 +111,12 @@
     &--production {
       padding-top: 55px;
       padding-bottom: 110px;
+    }
+
+    &--order {
+      padding-top: 137px;
+      padding-right: 0;
+      padding-left: 0;
     }
   }
 
