@@ -41,13 +41,15 @@
   &:focus {
     border-color: $light-green;
     outline: none;
+  }
 
+  &:focus {
     &:required:invalid {
       border-color: red;
+    }
 
-      & + .input-data__icon {
-        fill: red;
-      }
+    &:required:invalid + .input-data__icon {
+      fill: red;
     }
   }
 

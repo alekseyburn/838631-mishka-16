@@ -16,7 +16,7 @@ let menuToggle = function() {
 
   navToggle.addEventListener("click", function() {
     navMain.classList.toggle("page-header--menu-opened");
-  })
+  });
 }
 
 menuToggle();
@@ -47,13 +47,13 @@ let modalInitiate = function () {
     link.addEventListener("click", function (event) {
       event.preventDefault();
       modalShow();
-    })
-  })
+    });
+  });
 
   overlay.addEventListener("click", function (event) {
     event.preventDefault();
     modalClose();
-  })
+  });
 
   document.addEventListener("keyup", function (event) {
     if (event.defaultPrevented) {
@@ -68,7 +68,7 @@ let modalInitiate = function () {
         modalClose();
       }
     }
-  })
+  });
 }
 
 modalInitiate();
@@ -92,7 +92,7 @@ let sliderInitiate = function () {
 
     Array.prototype.forEach.call(slides, function(slideIndex, i) {
       slides[i].style.display = "none";
-    })
+    });
 
     slides[slideIndex - 1].style.display = "block";
   }
@@ -110,12 +110,12 @@ let sliderInitiate = function () {
   prevSlideBtn.addEventListener("click", function (event) {
     event.preventDefault();
     prevSlide();
-  })
+  });
 
   nextSlideBtn.addEventListener("click", function (event) {
     event.preventDefault();
     nextSlide();
-  })
+  });
 }
 
 sliderInitiate();
