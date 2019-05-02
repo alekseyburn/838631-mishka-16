@@ -6,8 +6,10 @@
   <meta name="format-detection" content="telephone=no">
   <title>Магазин «Мишка» - Вязание на заказ</title>
   <link rel="stylesheet" href="css/style.min.css">
+  <link rel="stylesheet" href="css/animate.min.css">
   <link rel="preload" href="fonts/opensans.woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/opensansbold.woff2" as="font" crossorigin="anonymous">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
   <script src="js/iepolyfills.min.js"></script>
 </head>
 <body>
@@ -62,7 +64,7 @@
       <h2 class="visually-hidden">Форма для заказа</h2>
       <p class="order__text">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
       <form class="form" action="https://echo.htmlacademy.ru" method="post">
-        <fieldset class="form__fieldset">
+        <fieldset class="form__fieldset wow fadeInUp">
           <div class="form__item">
             <div class="form__caption">Тип</div>
             <ul class="form__list">
@@ -83,7 +85,7 @@
             </ul>
           </div>
         </fieldset>
-        <fieldset class="form__fieldset">
+        <fieldset class="form__fieldset wow fadeInUp">
           <div class="form__item form__item--checkbox">
             <div class="form__wrapper">
               <div class="form__caption">Цвет</div>
@@ -134,7 +136,7 @@
             </div>
           </div>
         </fieldset>
-        <fieldset class="form__fieldset">
+        <fieldset class="form__fieldset wow fadeInUp">
           <div class="form__item form__item--initials">
             <div class="form__caption">ФИО</div>
             <ul class="form__list">
@@ -159,7 +161,7 @@
             </ul>
           </div>
         </fieldset>
-        <div class="form__item form__item--phone">
+        <div class="form__item form__item--phone wow fadeInUp">
           <div class="form__wrapper form__wrapper--contacts">
             <div class="form__caption">Тел</div>
             <label class="form__label input-data">
@@ -225,5 +227,6 @@
   </footer>
 
   <script src="js/script.min.js"></script>
+  <script>new WOW().init();</script>
 </body>
 </html>

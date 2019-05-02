@@ -6,8 +6,10 @@
   <meta name="format-detection" content="telephone=no">
   <title>Магазин «Мишка» - Каталог</title>
   <link rel="stylesheet" href="css/style.min.css">
+  <link rel="stylesheet" href="css/animate.min.css">
   <link rel="preload" href="fonts/opensans.woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/opensansbold.woff2" as="font" crossorigin="anonymous">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
   <script src="js/iepolyfills.min.js"></script>
 </head>
 <body>
@@ -60,7 +62,7 @@
 
     <section class="catalog section section--catalog">
       <h2 class="visually-hidden">Карточки товаров с описанием</h2>
-      <ul class="catalog__list">
+      <ul class="catalog__list wow fadeInUp">
         <li class="catalog__item">
           <a class="catalog__img-link" href="#">
             <picture>
@@ -133,7 +135,7 @@
       </ul>
     </section>
 
-    <section class="production section section--production">
+    <section class="production section section--production wow fadeInUp">
       <div class="production__wrapper">
         <div class="production__embed">
           <a class="production__link" href="/video.html">
@@ -222,5 +224,6 @@
   <div class="overlay" tabindex="-1"></div>
 
   <script src="js/script.min.js"></script>
+  <script>new WOW().init();</script>
 </body>
 </html>
