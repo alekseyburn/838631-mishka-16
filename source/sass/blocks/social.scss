@@ -15,7 +15,7 @@
   width: 140px;
 }
 
-.social__icon {
+.social__link {
   display: block;
 
   &:hover,
@@ -26,4 +26,8 @@
   &:active {
     opacity: 0.3;
   }
+}
+
+.social__icon {
+  display: block;
 }

@@ -1,6 +1,3 @@
-"use strict";
-
-(function () {
   //определяем, что браузер - ie11, загружаем полифил из cdn
   if(/Trident.*rv:/.test(navigator.userAgent)) {
     document.write('<script src="//cdnjs.cloudflare.com/ajax/libs/picturefill/3.0.3/picturefill.min.js" onerror="loadPicturefill()"><\/script>');
@@ -9,7 +6,7 @@
 
   //если cdn недоступен, загружаем полифил локально
   function loadFile(file) {
-    let fileRef = document.createElement('script');
+    let fileRef = document.createElement("script");
 
     fileRef.setAttribute("type", "text/javascript");
     fileRef.setAttribute("src", file);
@@ -17,10 +14,9 @@
   }
 
   function loadPicturefill() {
-    loadFile('picturefill.min.js');
+    loadFile("picturefill.min.js");
   }
 
   function loadSvgxuse() {
-    loadFile('svgxuse.min.js');
+    loadFile("svgxuse.min.js");
   }
-})();

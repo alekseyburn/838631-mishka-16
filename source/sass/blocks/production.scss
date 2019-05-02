@@ -180,8 +180,9 @@
   .production__embed {
     float: left;
     width: 682px;
+    height: 454px;
     margin-bottom: 0;
-    padding-bottom: 43.3%;
+    padding-bottom: 0;
   }
 
   .production__title {
@@ -210,5 +211,9 @@
     float: right;
     width: 230px;
     margin-right: 60px;
+  }
+
+  .production__img {
+    width: 100%;
   }
 }

@@ -1,111 +1,121 @@
-"use strict";
+let deleteJsClass = function() {
+  let navMain = document.querySelector(".page-header");
 
-(function () {
+  if (!navMain) return;
+
+  navMain.classList.remove("page-header--nojs");
+};
+
+deleteJsClass();
+
+let menuToggle = function() {
   let navMain = document.querySelector(".page-header");
   let navToggle = document.querySelector(".page-header__toggle");
 
-  //удаляем класс nojs, если js доступен
-  navMain.classList.remove("page-header--nojs");
+  if (!navMain || !navToggle) return;
 
   navToggle.addEventListener("click", function() {
-    //открываем/закрываем меню при нажатии на бургер/крестик
     navMain.classList.toggle("page-header--menu-opened");
   });
+};
 
-  let link = document.querySelector(".weekly-good__button");
+menuToggle();
+
+let modalInitiate = function () {
+  let link = document.querySelectorAll(".button--modal");
   let popup = document.querySelector(".cart");
   let overlay = document.querySelector(".overlay");
   let lastFocus;
 
-  if (!link) {
-    return;
-  } else {
-    //функция открытия модального окна и оверлея
-    let modalShow = function () {
-      popup.classList.add("cart--show");
-      overlay.classList.add("overlay--show");
-      lastFocus = document.activeElement;
-      popup.setAttribute('tabindex', '0');
-      popup.focus();
-    };
+  if (!link || !popup || !overlay) return;
 
-    //функция закрытия модального окна и оверлея
-    let modalClose = function () {
-      popup.classList.remove("cart--show");
-      overlay.classList.remove("overlay--show");
-      lastFocus.focus();
-    };
+  let modalShow = function () {
+    popup.classList.add("cart--show");
+    overlay.classList.add("overlay--show");
+    lastFocus = document.activeElement;
+    popup.setAttribute('tabindex', '0');
+    popup.focus();
+  };
 
-    //открываем модалку при нажатии на кнопку "заказать"
+  let modalClose = function () {
+    popup.classList.remove("cart--show");
+    overlay.classList.remove("overlay--show");
+    lastFocus.focus();
+  };
+
+  Array.prototype.forEach.call(link, function(link) {
     link.addEventListener("click", function (event) {
       event.preventDefault();
       modalShow();
     });
+  });
 
-    //закрываем модалку при нажатии на оверлей
-    overlay.addEventListener("click", function (event) {
-      event.preventDefault();
-      modalClose();
-    });
+  overlay.addEventListener("click", function (event) {
+    event.preventDefault();
+    modalClose();
+  });
 
-    //закрываем модалку при нажатии на esc
-    document.addEventListener("keyup", function (event) {
-      if (event.defaultPrevented) {
-        return;
-      }
-
-      var key = event.keyCode;
-
-      if (key === 'Escape' || key === 'Esc' || key === 27) {
-        event.preventDefault();
-        if (popup.classList.contains("cart--show")) {
-          modalClose();
-        }
-      }
-    });
-
-    //слайдер
-    let slideIndex = 1;
-    showSlide(slideIndex);
-    //следующий слайд
-    function nextSlide() {
-      showSlide(slideIndex += 1);
-    }
-    //предыдущий слайд
-    function prevSlide() {
-      showSlide(slideIndex -= 1);
+  document.addEventListener("keyup", function (event) {
+    if (event.defaultPrevented) {
+      return;
     }
 
-    //функция показа слайда
-    function showSlide(currentSlide) {
-      let slides = document.querySelectorAll(".reviews__item");
+    var key = event.keyCode;
 
-      if (currentSlide > slides.length) {
-        slideIndex = 1;
-      }
+    if (key === 'Escape' || key === 'Esc' || key === 27) {
+      event.preventDefault();
+      if (popup.classList.contains("cart--show")) {
+        modalClose();
+      };
+    };
+  });
+};
 
-      if (currentSlide < 1) {
-        slideIndex = slides.length;
-      }
+modalInitiate();
 
-      Array.prototype.forEach.call(slides, function(slideIndex, i) {
-        slides[i].style.display = "none";
-      });
+let sliderInitiate = function () {
+  let slides = document.querySelectorAll(".reviews__item");
+  let prevSlideBtn = document.querySelector(".reviews__change-btn--prev");
+  let nextSlideBtn = document.querySelector(".reviews__change-btn--next");
+  let slideIndex = 1;
 
-      slides[slideIndex - 1].style.display = "block";
+  if (!slides || !prevSlideBtn || !nextSlideBtn) return;
+
+  let showSlide = function (currentSlide) {
+    if (currentSlide > slides.length) {
+      slideIndex = 1;
     }
-    //назначение переключателей на кнопки
-    let prevSlideBtn = document.querySelector(".reviews__change-btn--prev");
-    let nextSlideBtn = document.querySelector(".reviews__change-btn--next");
 
-    prevSlideBtn.addEventListener("click", function (event) {
-      event.preventDefault();
-      prevSlide();
+    if (currentSlide < 1) {
+      slideIndex = slides.length;
+    }
+
+    Array.prototype.forEach.call(slides, function(slideIndex, i) {
+      slides[i].style.display = "none";
     });
 
-    nextSlideBtn.addEventListener("click", function (event) {
-      event.preventDefault();
-      nextSlide();
-    });
-  }
-})();
+    slides[slideIndex - 1].style.display = "block";
+  };
+
+  showSlide(slideIndex);
+
+  let nextSlide = function () {
+    showSlide(slideIndex += 1);
+  };
+
+  let prevSlide = function () {
+    showSlide(slideIndex -= 1);
+  };
+
+  prevSlideBtn.addEventListener("click", function (event) {
+    event.preventDefault();
+    prevSlide();
+  });
+
+  nextSlideBtn.addEventListener("click", function (event) {
+    event.preventDefault();
+    nextSlide();
+  });
+};
+
+sliderInitiate();

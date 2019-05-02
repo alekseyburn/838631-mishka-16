@@ -5,8 +5,11 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="format-detection" content="telephone=no">
   <title>Магазин «Мишка»</title>
-  <link rel="stylesheet" href="css/style.css">
-  <script src="js/iepolyfills.js"></script>
+  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="preload" href="fonts/opensans.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/opensansbold.woff2" as="font" crossorigin="anonymous">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <script src="js/iepolyfills.min.js"></script>
 </head>
 <body>
 
@@ -38,12 +41,12 @@
           </li>
           <li class="site-list__item">
             <a class="site-list__link site-list__link--search" href="search.html" tabindex="4">
-              <svg class="site-list__svg" width="17.6px" height="17.6px"><use xlink:href="img/sprite.svg#icon-search"></use></svg>
+              <svg class="site-list__svg" width="17.6" height="17.6"><use xlink:href="img/sprite.svg#icon-search"></use></svg>
             Поиск по сайту</a>
           </li>
           <li class="site-list__item">
             <a class="site-list__link site-list__link--cart" href="cart.html" tabindex="5">
-              <svg class="site-list__svg" width="20.294px" height="18.849px"><use xlink:href="img/sprite.svg#icon-cart"></use></svg>
+              <svg class="site-list__svg" width="20.294" height="18.849"><use xlink:href="img/sprite.svg#icon-cart"></use></svg>
             Корзина: пока пуста</a>
           </li>
         </ul>
@@ -105,7 +108,7 @@
       </div>
       <div class="weekly-good__info-wrapper weekly-good__info-wrapper--order">
         <p class="weekly-good__price">Цена: 990 руб.</p>
-        <a class="weekly-good__button button" href="order.html" tabindex="7">Заказать</a>
+        <a class="weekly-good__button button button--modal" href="order.html" tabindex="7">Заказать</a>
       </div>
     </section>
 
@@ -113,27 +116,27 @@
       <h2 class="about__title section__title">Коротко о нас:</h2>
       <ul class="about__list">
         <li class="about__item about__item--ecology">
-          <svg class="about__icon" width="31.972px" height="37.301px"><use xlink:href="img/sprite.svg#icon-ecology"></use></svg>
+          <svg class="about__icon" width="31.972" height="37.301"><use xlink:href="img/sprite.svg#icon-feature-flower"></use></svg>
           <p class="about__text">Экологически чистые&nbsp;материалы</p>
         </li>
         <li class="about__item about__item--price">
-          <svg class="about__icon" width="46.575px" height="27.332px"><use xlink:href="img/sprite.svg#icon-price"></use></svg>
+          <svg class="about__icon" width="46.575" height="27.332"><use xlink:href="img/sprite.svg#icon-feature-money"></use></svg>
           <p class="about__text">Скандинавский стиль по&nbsp;российской цене</p>
         </li>
         <li class="about__item about__item--likes">
-          <svg class="about__icon" width="33.05px" height="27.857px"><use xlink:href="img/sprite.svg#icon-likes"></use></svg>
+          <svg class="about__icon" width="33.05" height="27.857"><use xlink:href="img/sprite.svg#icon-feature-heart"></use></svg>
           <p class="about__text">Увеличивает лайки на&nbsp;фотографиях</p>
         </li>
         <li class="about__item about__item--knitting">
-          <svg class="about__icon"width="34.373px" height="34.373px"><use xlink:href="img/sprite.svg#icon-knitting"></use></svg>
+          <svg class="about__icon" width="34.373" height="34.373"><use xlink:href="img/sprite.svg#icon-feature-ball"></use></svg>
           <p class="about__text">Связано вручную с любовью&nbsp;и&nbsp;умилением</p>
         </li>
         <li class="about__item about__item--support">
-          <svg class="about__icon" width="54.156px" height="23.183px"><use xlink:href="img/sprite.svg#icon-support"></use></svg>
+          <svg class="about__icon" width="54.156" height="23.183"><use xlink:href="img/sprite.svg#icon-feature-rocket"></use></svg>
           <p class="about__text">Поддержка отечественного производителя</p>
         </li>
         <li class="about__item about__item--gift">
-          <svg class="about__icon" width="32.666px" height="32.486px"><use xlink:href="img/sprite.svg#icon-gift"></use></svg>
+          <svg class="about__icon" width="32.666" height="32.486"><use xlink:href="img/sprite.svg#icon-feature-gift"></use></svg>
           <p class="about__text">Поставляется в подарочной&nbsp;упаковке</p>
         </li>
       </ul>
@@ -161,10 +164,10 @@
         </div>
         <div class="reviews__slide-wrapper">
           <button class="reviews__change-btn reviews__change-btn--prev" type="button" aria-label="Предыдущий отзыв" tabindex="10">
-            <svg width="50px" height="26.003px"><use xlink:href="img/sprite.svg#icon-btn-prev"></use></svg>
+            <svg width="50" height="26.003"><use xlink:href="img/sprite.svg#icon-left-arrow"></use></svg>
           </button>
           <button class="reviews__change-btn reviews__change-btn--next" type="button" aria-label="Следующий отзыв" tabindex="11">
-            <svg width="50px" height="26.003px"><use xlink:href="img/sprite.svg#icon-btn-next"></use></svg>
+            <svg width="50" height="26.003"><use xlink:href="img/sprite.svg#icon-right-arrow"></use></svg>
           </button>
         </div>
         <a class="reviews__button button" href="review.html" tabindex="8">Написать</a>
@@ -186,7 +189,7 @@
         </tr>
       </table>
       <div class="contacts__map map">
-        <iframe class="map__widget" src="https://yandex.ru/map-widget/v1/-/CCu264MZ" width="320" height="457" allowfullscreen="true" Frameborder="0"></iframe>
+        <iframe class="map__widget" src="https://yandex.ru/map-widget/v1/-/CCu264MZ" width="320" height="457" allowfullscreen></iframe>
         <picture>
           <source type="image/webp" media="(min-width: 1150px)" srcset="img/map-desktop@1x.webp 1x, img/map-desktop@2x.webp 2x">
           <source type="image/webp" media="(min-width: 768px)" srcset="img/map-tablet@1x.webp 1x, img/map-tablet@2x.webp 2x">
@@ -205,30 +208,30 @@
   <footer class="page-footer">
     <div class="page-footer__wrapper">
       <a class="page-footer__logo" href="index.html" >
-        <svg class="page-footer__logo-image" width="101.615px" height="34.056px"><use xlink:href="img/sprite.svg#icon-footer-logo"></use></svg>
+        <svg class="page-footer__logo-image" width="101.615" height="34.056"><use xlink:href="img/sprite.svg#logo-footer"></use></svg>
       </a>
       <div class="page-footer__social social">
         <ul class="social__list">
           <li class="social__item">
             <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy" aria-label="Мы в Инстаграме">
-              <svg class="social__icon" width="21.769px" height="21.334px"><use xlink:href="img/sprite.svg#icon-instagram"></use></svg>
+              <svg class="social__icon" width="21.769" height="21.334"><use xlink:href="img/sprite.svg#icon-insta"></use></svg>
             </a>
           </li>
           <li class="social__item">
             <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy" aria-label="Мы в Фейсбуке">
-              <svg class="social__icon" width="14.962px" height="27.718px"><use xlink:href="img/sprite.svg#icon-facebook"></use></svg>
+              <svg class="social__icon" width="14.962" height="27.718"><use xlink:href="img/sprite.svg#icon-fb"></use></svg>
             </a>
           </li>
           <li class="social__item">
             <a class="social__link social__link--twitter" href="https://www.twitter.com/htmlacademy" aria-label="Мы в Твиттере">
-              <svg class="social__icon" width="23.494px" height="20.168px"><use xlink:href="img/sprite.svg#icon-twitter"></use></svg>
+              <svg class="social__icon" width="23.494" height="20.168"><use xlink:href="img/sprite.svg#icon-twitter"></use></svg>
             </a>
           </li>
         </ul>
       </div>
       <div class="page-footer__copyright copyright">
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="HTML Academy">Разработано
-          <svg class="copyright__icon" width="26.943px" height="34.09px"><use xlink:href="img/sprite.svg#icon-htmlacademy"></use></svg>
+          <svg class="copyright__icon" width="26.943" height="34.09"><use xlink:href="img/sprite.svg#logo-htmlacademy"></use></svg>
         </a>
       </div>
     </div>
@@ -264,6 +267,6 @@
 
   <div class="overlay" tabindex="-1"></div>
 
-  <script src="js/script.js"></script>
+  <script src="js/script.min.js"></script>
 </body>
 </html>

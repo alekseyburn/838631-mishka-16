@@ -105,6 +105,10 @@
     width: 50%;
   }
 
+  .catalog__img {
+    min-height: 100%;
+  }
+
   .catalog__wrapper {
     display: flex;
     flex-direction: column;
