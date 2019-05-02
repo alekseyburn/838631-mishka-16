@@ -47,6 +47,10 @@
   border-color: $light-green;
 }
 
+.size__control:disabled + .size__switcher {
+  opacity: 0.3;
+}
+
 @media (min-width: $tablet-width) {
   .size__switcher {
     width: 112px;

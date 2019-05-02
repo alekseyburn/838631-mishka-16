@@ -27,7 +27,7 @@ gulp.task("html", function () {
     .pipe(server.stream());
 });
 
-gulp.task("css", function (callback) {
+gulp.task("css", function () {
   if (isProduction) {
     return gulp.src("source/sass/style.scss")
     .pipe(plumber())
@@ -55,7 +55,6 @@ gulp.task("css", function (callback) {
     .pipe(gulp.dest("build/css"))
     .pipe(server.stream());
   }
-  callback();
 });
 
 gulp.task("webp", function () {
@@ -75,7 +74,7 @@ gulp.task("images", function () {
     .pipe(gulp.dest("build/img"));
 });
 
-gulp.task("js", function (callback) {
+gulp.task("js", function () {
   if (isProduction) {
     return gulp.src("source/js/**/*.js")
     .pipe(babel({ presets: ["@babel/preset-env"] }))
@@ -87,13 +86,12 @@ gulp.task("js", function (callback) {
     return gulp.src("source/js/**/*.js")
     .pipe(sourcemap.init())
     .pipe(babel({ presets: ["@babel/preset-env"] }))
+    .pipe(iife())
     .pipe(uglyfly())
-    .pipe(iife({ useStrict: false}))
     .pipe(rename({extname: ".min.js"}))
     .pipe(sourcemap.write("."))
     .pipe(gulp.dest("build/js"));
   }
-  callback();
 });
 
 gulp.task("sprite", function() {

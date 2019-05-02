@@ -52,6 +52,10 @@
   border-color: $gray;
 }
 
+.radio__control:disabled + .radio__btn {
+  opacity: 0.3;
+}
+
 @media (min-width: $tablet-width) {
   .radio__btn {
     width: 52px;

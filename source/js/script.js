@@ -4,7 +4,7 @@ let deleteJsClass = function() {
   if (!navMain) return;
 
   navMain.classList.remove("page-header--nojs");
-}
+};
 
 deleteJsClass();
 
@@ -17,7 +17,7 @@ let menuToggle = function() {
   navToggle.addEventListener("click", function() {
     navMain.classList.toggle("page-header--menu-opened");
   });
-}
+};
 
 menuToggle();
 
@@ -35,13 +35,13 @@ let modalInitiate = function () {
     lastFocus = document.activeElement;
     popup.setAttribute('tabindex', '0');
     popup.focus();
-  }
+  };
 
   let modalClose = function () {
     popup.classList.remove("cart--show");
     overlay.classList.remove("overlay--show");
     lastFocus.focus();
-  }
+  };
 
   Array.prototype.forEach.call(link, function(link) {
     link.addEventListener("click", function (event) {
@@ -66,10 +66,10 @@ let modalInitiate = function () {
       event.preventDefault();
       if (popup.classList.contains("cart--show")) {
         modalClose();
-      }
-    }
+      };
+    };
   });
-}
+};
 
 modalInitiate();
 
@@ -95,17 +95,17 @@ let sliderInitiate = function () {
     });
 
     slides[slideIndex - 1].style.display = "block";
-  }
+  };
 
   showSlide(slideIndex);
 
   let nextSlide = function () {
     showSlide(slideIndex += 1);
-  }
+  };
 
   let prevSlide = function () {
     showSlide(slideIndex -= 1);
-  }
+  };
 
   prevSlideBtn.addEventListener("click", function (event) {
     event.preventDefault();
@@ -116,6 +116,6 @@ let sliderInitiate = function () {
     event.preventDefault();
     nextSlide();
   });
-}
+};
 
 sliderInitiate();
