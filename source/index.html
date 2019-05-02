@@ -6,6 +6,7 @@
   <meta name="format-detection" content="telephone=no">
   <title>Магазин «Мишка»</title>
   <link rel="stylesheet" href="css/style.min.css">
+  <link rel="stylesheet" href="css/animate.min.css">
   <link rel="preload" href="fonts/opensans.woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/opensansbold.woff2" as="font" crossorigin="anonymous">
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
@@ -75,7 +76,7 @@
       </ul>
     </section>
 
-    <section class="weekly-good section section--weekly-good">
+    <section class="weekly-good section section--weekly-good wow fadeInUp">
       <div class="weekly-good__title-wrapper">
         <h2 class="weekly-good__title section__title">Вязаные корзинки</h2>
         <b class="weekly-good__subtitle">Товар недели</b>
@@ -112,7 +113,7 @@
       </div>
     </section>
 
-    <section class="about section section--about">
+    <section class="about section section--about wow fadeInUp">
       <h2 class="about__title section__title">Коротко о нас:</h2>
       <ul class="about__list">
         <li class="about__item about__item--ecology">
@@ -142,7 +143,7 @@
       </ul>
     </section>
 
-    <section class="reviews section section--reviews">
+    <section class="reviews section section--reviews wow fadeInUp">
       <div class="reviews__wrapper">
         <h2 class="reviews__title section__title">Отзывы</h2>
         <div class="reviews__list">
@@ -174,7 +175,7 @@
       </div>
     </section>
 
-    <section class="contacts section section--contacts">
+    <section class="contacts section section--contacts wow fadeInUp">
       <h2 class="contacts__title">Контакты</h2>
       <table class="contacts__table contacts-list">
         <tr class="contacts-list__row">
@@ -268,5 +269,6 @@
   <div class="overlay" tabindex="-1"></div>
 
   <script src="js/script.min.js"></script>
+  <script>new WOW().init();</script>
 </body>
 </html>

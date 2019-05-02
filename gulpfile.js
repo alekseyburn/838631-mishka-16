@@ -78,8 +78,8 @@ gulp.task("js", function () {
   if (isProduction) {
     return gulp.src("source/js/**/*.js")
     .pipe(babel({ presets: ["@babel/preset-env"] }))
+    .pipe(iife())
     .pipe(uglyfly())
-    .pipe(iife({ useStrict: false}))
     .pipe(rename({extname: ".min.js"}))
     .pipe(gulp.dest("build/js"));
   } else {
@@ -104,7 +104,8 @@ gulp.task("sprite", function() {
 gulp.task("copy", function () {
   return gulp.src([
     "source/fonts/**/*.{woff,woff2}",
-    "source/*.ico"
+    "source/*.ico",
+    "source/css/*.css"
     ], {
       base: "source"
     })

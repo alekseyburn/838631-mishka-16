@@ -119,3 +119,17 @@ let sliderInitiate = function () {
 };
 
 sliderInitiate();
+
+document.write('<script src="//cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js" onerror="loadWowAnimate()"><\/script>');
+
+let loadFile = function (file) {
+  let fileRef = document.createElement("script");
+
+  fileRef.setAttribute("type", "text/javascript");
+  fileRef.setAttribute("src", file);
+  document.getElementsByTagName("head")[0].appendChild(fileRef);
+}
+
+let loadWowAnimate = function () {
+  loadFile("wow.min.js");
+}

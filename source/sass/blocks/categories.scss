@@ -110,6 +110,8 @@
   &:focus {
     padding-bottom: 6px;
 
+    transition: all 0.1s ease-in;
+
     &::after {
       opacity: 0.7;
     }
