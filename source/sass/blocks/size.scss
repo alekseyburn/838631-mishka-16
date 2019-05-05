@@ -25,11 +25,11 @@
   border-color: $light-green;
 }
 
-.size__control:hover + .size__switcher {
+.size__control:hover:not(:disabled) + .size__switcher {
   border-color: $dark-gray;
 }
 
-.size__control:focus + .size__switcher::after {
+.size__control:focus:not(:disabled) + .size__switcher::after {
   content: "";
   position: absolute;
   top: -10px;
@@ -43,12 +43,14 @@
   outline: 2px solid rgba(3, 102, 214, 0.3);
 }
 
-.size__control:active + .size__switcher {
+.size__control:active:not(:disabled) + .size__switcher {
   border-color: $light-green;
 }
 
 .size__control:disabled + .size__switcher {
   opacity: 0.3;
+
+  cursor: default;
 }
 
 @media (min-width: $tablet-width) {

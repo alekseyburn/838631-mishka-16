@@ -22,23 +22,23 @@ let menuToggle = function() {
 menuToggle();
 
 let modalInitiate = function () {
-  let link = document.querySelectorAll(".button--modal");
-  let popup = document.querySelector(".cart");
+  let link = document.querySelectorAll(".button-js");
+  let popup = document.querySelector(".cart-popup");
   let overlay = document.querySelector(".overlay");
   let lastFocus;
 
   if (!link || !popup || !overlay) return;
 
   let modalShow = function () {
-    popup.classList.add("cart--show");
+    popup.classList.add("cart-popup--show");
     overlay.classList.add("overlay--show");
     lastFocus = document.activeElement;
-    popup.setAttribute('tabindex', '0');
+    popup.setAttribute("tabindex", "0");
     popup.focus();
   };
 
   let modalClose = function () {
-    popup.classList.remove("cart--show");
+    popup.classList.remove("cart-popup--show");
     overlay.classList.remove("overlay--show");
     lastFocus.focus();
   };
@@ -62,12 +62,12 @@ let modalInitiate = function () {
 
     var key = event.keyCode;
 
-    if (key === 'Escape' || key === 'Esc' || key === 27) {
+    if (key === "Escape" || key === "Esc" || key === 27) {
       event.preventDefault();
-      if (popup.classList.contains("cart--show")) {
+      if (popup.classList.contains("cart-popup--show")) {
         modalClose();
-      };
-    };
+      }
+    }
   });
 };
 
@@ -119,17 +119,3 @@ let sliderInitiate = function () {
 };
 
 sliderInitiate();
-
-document.write('<script src="//cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js" onerror="loadWowAnimate()"><\/script>');
-
-let loadFile = function (file) {
-  let fileRef = document.createElement("script");
-
-  fileRef.setAttribute("type", "text/javascript");
-  fileRef.setAttribute("src", file);
-  document.getElementsByTagName("head")[0].appendChild(fileRef);
-}
-
-let loadWowAnimate = function () {
-  loadFile("wow.min.js");
-}

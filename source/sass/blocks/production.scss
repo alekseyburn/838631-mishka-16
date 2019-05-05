@@ -59,7 +59,7 @@
   height: 0;
   padding-bottom: 56.25%;
 
-  background-color: $light-green;
+  background-color: $gray;
 
   &:hover .production__button,
   &:focus .production__button {
@@ -173,8 +173,18 @@
   }
 
   .production__wrapper {
+    position: relative;
+
     display: block;
     min-height: 456px;
+    padding-bottom: 0;
+
+    &::after {
+      content: "";
+
+      display: table;
+      clear: both;
+    }
   }
 
   .production__embed {
@@ -202,13 +212,17 @@
   .production__text {
     float: right;
     width: 290px;
-    margin-bottom: 50px;
+    margin-bottom: 0;
     padding-right: 60px;
+    padding-bottom: 120px;
     padding-left: 0;
   }
 
   .production__order {
-    float: right;
+    position: absolute;
+    right: 0;
+    bottom: 60px;
+
     width: 230px;
     margin-right: 60px;
   }

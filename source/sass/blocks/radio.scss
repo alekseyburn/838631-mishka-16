@@ -5,10 +5,16 @@
   align-items: center;
   min-height: 40px;
 
+  word-break: break-all;
+
   cursor: pointer;
 
-  &:hover .radio__btn {
+  &:hover .radio__control:not(:disabled) + .radio__btn {
     border-color: $light-green;
+  }
+
+  &:active .radio__control:not(:disabled) + .radio__btn {
+    border-color: $gray;
   }
 }
 
@@ -20,6 +26,7 @@
   position: relative;
 
   display: flex;
+  flex-shrink: 0;
   justify-content: center;
   align-items: center;
   min-width: 40px;
@@ -48,12 +55,10 @@
   border-color: $light-green;
 }
 
-.radio__control:active + .radio__btn {
-  border-color: $gray;
-}
-
 .radio__control:disabled + .radio__btn {
   opacity: 0.3;
+
+  cursor: default;
 }
 
 @media (min-width: $tablet-width) {

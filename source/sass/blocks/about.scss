@@ -86,10 +86,13 @@
   }
 
   .about__text {
+    padding-right: 30px;
+
     font-size: 20px;
     line-height: 22px;
   }
 }
+
 
 @media (min-width: $desktop-width) {
   .about {

@@ -7,6 +7,7 @@
   padding: 0 $mobile-indent;
 
   font-size: 27px;
+  text-align: center;
   color: $black;
 
   background-color: $light-gray;
@@ -19,6 +20,7 @@
     font-size: 0;
   }
 }
+
 
 @media (min-width: $tablet-width) {
   .page-main__title {

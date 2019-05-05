@@ -5,10 +5,16 @@
   align-items: center;
   min-height: 41px;
 
+  word-break: break-all;
+
   cursor: pointer;
 
-  &:hover .checkbox__btn {
+  &:hover .checkbox__control:not(:disabled) + .checkbox__btn {
     border-color: $light-green;
+  }
+
+  &:active .checkbox__control:not(:disabled) + .checkbox__btn {
+    border-color: $gray;
   }
 }
 
@@ -20,6 +26,7 @@
   position: relative;
 
   display: flex;
+  flex-shrink: 0;
   justify-content: center;
   align-items: center;
   width: 40px;
@@ -29,6 +36,7 @@
 
   border: 2px solid  $black;
 }
+
 
 .checkbox__control:checked + .checkbox__btn::before {
   content: "";
@@ -49,11 +57,8 @@
   border-color: $light-green;
 }
 
-.checkbox__control:active + .checkbox__btn {
-  border-color: $gray;
-}
-
 .checkbox__control:disabled + .checkbox__btn {
+  cursor: default;
   opacity: 0.3;
 }
 
