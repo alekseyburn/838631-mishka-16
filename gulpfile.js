@@ -78,16 +78,16 @@ gulp.task("js", function () {
   if (isProduction) {
     return gulp.src("source/js/**/*.js")
     .pipe(babel({ presets: ["@babel/preset-env"] }))
-    .pipe(iife())
     .pipe(uglyfly())
+    .pipe(iife({useStrict: false}))
     .pipe(rename({extname: ".min.js"}))
     .pipe(gulp.dest("build/js"));
   } else {
     return gulp.src("source/js/**/*.js")
     .pipe(sourcemap.init())
     .pipe(babel({ presets: ["@babel/preset-env"] }))
-    .pipe(iife())
     .pipe(uglyfly())
+    .pipe(iife({useStrict: false}))
     .pipe(rename({extname: ".min.js"}))
     .pipe(sourcemap.write("."))
     .pipe(gulp.dest("build/js"));

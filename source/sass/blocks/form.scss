@@ -21,10 +21,10 @@
 .form__caption {
   position: relative;
 
-  width: 70px;
+  display: flex;
+  align-items: center;
   margin-bottom: 25px;
   padding: 0;
-  padding-right: 10px;
 
   font-weight: bold;
   font-size: 17px;
@@ -35,17 +35,19 @@
 
   &::after {
     content: "";
-    position: absolute;
-    top: 50%;
-    right: 0;
-    left: 70px;
 
-    width: 60vw;
+    display: flex;
+    flex-grow: 1;
+    flex-shrink: 0;
+    min-width: 180px;
+    max-width: 650px;
     height: 1px;
+    margin-left: 20px;
 
     background-color: $light-green;
   }
 }
+
 
 .form__list {
   @include reset-list;
