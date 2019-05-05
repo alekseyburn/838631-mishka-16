@@ -19,7 +19,7 @@ img {
 
 body {
   min-width: $mobile-width;
-  max-width: 1920px;
+  max-width: $desktop-width;
   margin: 0 auto;
 
 
